@@ -40,32 +40,5 @@ namespace CheckItAndroidApp
             throw new NotImplementedException();
         }
     }
-
-    public class A
-    {
-        int Id { get; set; }
-
-        public string Method1()
-        {
-            return "nejc";
-        }
-
-        public virtual void Method2()
-        {
-        }
-    }
-
-
-    public class B : A
-    {
-        public override void Method2()
-        {
-            base.Method2();
-
-
-
-        }
-    }
-
 }
 
