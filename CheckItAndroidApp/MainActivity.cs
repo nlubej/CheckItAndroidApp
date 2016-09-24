@@ -67,9 +67,7 @@ namespace CheckItAndroidApp
         }
     }
 
-    nejc is faggot;aasdasaaa
-
-
+    nejc is faggot;aasdasb
 
 }
 
