@@ -20,7 +20,7 @@ namespace CheckItAndroidApp.Client.Views
             pref = new PreferenceHelper(this);
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            pref.Insert(PreferenceHelper.UserName, "Matic Lubej");
+            pref.Insert(PreferenceHelper.UserName, "Nejc Lubej");
 
             var userName = pref.GetString(PreferenceHelper.UserName);
             button.Text = string.Format("{0}, click me!", userName);
@@ -37,3 +37,4 @@ namespace CheckItAndroidApp.Client.Views
 //TODO ctrl + click shortcut for go to implementation
 //TODO  Tools -> Options -> Projects and Solutions -> General -> "Track Active Item in Solution Explorer" 
 //TODO navigate to shorcut
+//TODO get mad cash
