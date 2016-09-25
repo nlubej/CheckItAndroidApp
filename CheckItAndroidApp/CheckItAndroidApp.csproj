@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Client\Student.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +94,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Business\Adapters\" />
+    <Folder Include="Core\Business\Dtos\" />
+    <Folder Include="Core\Business\Interfaces\" />
+    <Folder Include="Core\Client\Dialogs\" />
+    <Folder Include="Core\Client\Views\" />
+    <Folder Include="Core\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Parcelable.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

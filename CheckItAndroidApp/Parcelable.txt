@@ -1,0 +1,9 @@
+﻿SET:
+
+intent.putExtra("student", new Student("1","Mike","6"));
+
+GET:
+Bundle data = getIntent().getExtras();
+Student student = (Student) data.getParcelable("student");
+
+Clas more implemetirati Parcelable, da se to lahko nardi.
