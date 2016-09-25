@@ -69,8 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Client\Student.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Core\Data\DatabaseHelper.cs" />
+    <Compile Include="Core\Data\PreferenceHelper.cs" />
+    <Compile Include="Core\Client\Views\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,8 +101,6 @@
     <Folder Include="Core\Business\Dtos\" />
     <Folder Include="Core\Business\Interfaces\" />
     <Folder Include="Core\Client\Dialogs\" />
-    <Folder Include="Core\Client\Views\" />
-    <Folder Include="Core\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Parcelable.txt" />
