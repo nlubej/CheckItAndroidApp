@@ -43,10 +43,6 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\sqlite-net-pcl.1.2.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.0.1\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
       <Private>True</Private>
@@ -69,9 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Business\Dtos\ChallangeDto.cs" />
+    <Compile Include="Core\Data\ChallangeData.cs" />
     <Compile Include="Core\Data\DatabaseHelper.cs" />
+    <Compile Include="Core\Data\DataManger.cs" />
     <Compile Include="Core\Data\PreferenceHelper.cs" />
     <Compile Include="Core\Client\Views\MainActivity.cs" />
+    <Compile Include="Core\Data\Utils\PreferenceUtils.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Business\Adapters\" />
-    <Folder Include="Core\Business\Dtos\" />
     <Folder Include="Core\Business\Interfaces\" />
     <Folder Include="Core\Client\Dialogs\" />
   </ItemGroup>

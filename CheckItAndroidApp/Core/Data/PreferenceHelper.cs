@@ -13,14 +13,11 @@ namespace CheckItAndroidApp.Core.Data
             this.context = context;
         }
 
-        public static string UserName = "USERNAME";
-
         /// <summary>
         /// Insert preference
         /// </summary>
         public void Insert<T>(string key, T value)
         {
-
             var prefManager = PreferenceManager.GetDefaultSharedPreferences(context);
             var editor = prefManager.Edit();
 

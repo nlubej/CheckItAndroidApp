@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using CheckItAndroidApp.Core.Data;
+using CheckItAndroidApp.Core.Data.Utils;
 
 namespace CheckItAndroidApp.Client.Views
 {
@@ -9,7 +10,8 @@ namespace CheckItAndroidApp.Client.Views
     public class MainActivity : Activity
     {
         private PreferenceHelper pref;
-        int count = 1;
+        private int count = 1;
+        private DataManger dm;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -18,17 +20,22 @@ namespace CheckItAndroidApp.Client.Views
             SetContentView(Resource.Layout.Main);
 
             pref = new PreferenceHelper(this);
+            dm = new DataManger(this);
+
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            pref.Insert(PreferenceHelper.UserName, "Nejc Lubej");
+            pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
 
-            var userName = pref.GetString(PreferenceHelper.UserName);
+            var userName = pref.GetString(PreferenceKeys.UserName);
             button.Text = string.Format("{0}, click me!", userName);
 
             button.Click += delegate
             {
                 button.Text = string.Format("{0} {1} clicks!", count++, GetString(Resource.String.SecretString));
             };
+
+            //Get Challanges from database
+            var challangeList = dm.ChallangeData.GetChallanges();
         }
     }
 }
