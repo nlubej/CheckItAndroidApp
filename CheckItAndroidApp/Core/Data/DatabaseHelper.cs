@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Android.Database.Sqlite;
 using System;
 using Android.Content;
@@ -39,7 +37,7 @@ namespace CheckItAndroidApp.Core.Data
             {
                 if (oldVersion == 1 && newVersion == 2)
                 {
-                    //do modifications
+                    //do modifications like alter table
                     return;
                 }
             }
@@ -64,7 +62,12 @@ namespace CheckItAndroidApp.Core.Data
         /// <returns></returns>
         public ICursor GetFromTable(string tableName, string[] columns, string condition = "")
         {
-            return SimpleSelect(tableName, columns, condition);
+            return SelectWhere(tableName, columns, condition);
+        }
+
+        private ICursor SelectWhere(string tableName, string[] columns, string condition)
+        {
+            return db.Query(tableName, columns, condition, null, null, null, null);
         }
     }
 }
