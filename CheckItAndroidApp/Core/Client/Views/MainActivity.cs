@@ -3,14 +3,16 @@ using Android.Widget;
 using Android.OS;
 using CheckItAndroidApp.Core.Data;
 using CheckItAndroidApp.Core.Data.Utils;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace CheckItAndroidApp.Client.Views
 {
     [Activity(Label = "CheckIt", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : AppCompatActivity
     {
         private PreferenceHelper pref;
-        private int count = 1;
+        //private int count = 1;
         private DataManger dm;
 
         protected override void OnCreate(Bundle bundle)
@@ -22,20 +24,15 @@ namespace CheckItAndroidApp.Client.Views
             pref = new PreferenceHelper(this);
             dm = new DataManger(this);
 
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.Title = "Hello from Appcompat Toolbar";
+           // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
 
-            pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
-
-            var userName = pref.GetString(PreferenceKeys.UserName);
-            button.Text = string.Format("{0}, click me!", userName);
-
-            button.Click += delegate
-            {
-                button.Text = string.Format("{0} {1} clicks!", count++, GetString(Resource.String.SecretString));
-            };
-
+          //  var userName = pref.GetString(PreferenceKeys.UserName);
+       
             //Get Challanges from database
-            var challangeList = dm.ChallangeData.GetChallanges();
+            //var challangeList = dm.ChallangeData.GetChallanges();
         }
     }
 }
