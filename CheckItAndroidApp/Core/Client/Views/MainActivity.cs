@@ -2,19 +2,50 @@
 using Android.Widget;
 using Android.OS;
 using CheckItAndroidApp.Core.Data;
-using CheckItAndroidApp.Core.Data.Utils;
 using Android.Support.V7.App;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Views;
+using Android.Support.V7.Widget;
+using CheckItAndroidApp.Core.Business.Adapters;
+using Android.Support.Design.Widget;
+using System.Collections.Generic;
 
 namespace CheckItAndroidApp.Client.Views
 {
     [Activity(Label = "CheckIt", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : Activity
     {
+        private RecyclerView mRecyclerView;
         private PreferenceHelper pref;
-        //private int count = 1;
         private DataManger dm;
 
+
+        List<Core.Business.Dtos.ChallangeDto> challenges = new List<Core.Business.Dtos.ChallangeDto>
+            {
+                new Core.Business.Dtos.ChallangeDto
+                {
+                    Duration = 10,
+                    Name = "Name 1",
+                    Id = 1
+                },
+                new Core.Business.Dtos.ChallangeDto
+                {
+                    Duration = 10,
+                    Name = "Name 2",
+                    Id = 2
+                },
+                new Core.Business.Dtos.ChallangeDto
+                {
+                    Duration = 10,
+                    Name = "Name 3",
+                    Id = 3
+                },
+                new Core.Business.Dtos.ChallangeDto
+                {
+                    Duration = 10,
+                    Name = "Name 4",
+                    Id = 4
+                },
+    };
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -24,15 +55,63 @@ namespace CheckItAndroidApp.Client.Views
             pref = new PreferenceHelper(this);
             dm = new DataManger(this);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Hello from Appcompat Toolbar";
-           // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
+            var recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
+            var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
 
-          //  var userName = pref.GetString(PreferenceKeys.UserName);
-       
+            SetActionBar(toolbar);
+            ActionBar.Title = "Check It";
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
+
+            var layoutManager = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
+            recyclerView.SetLayoutManager(layoutManager);
+
+            var adapter = new ChallengeAdapter(challenges);
+
+            recyclerView.SetAdapter(adapter);
+
+            adapter.ItemClick += MoviesAdapter_ItemClick;
+
+            // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
+
+            //  var userName = pref.GetString(PreferenceKeys.UserName);
+
             //Get Challanges from database
             //var challangeList = dm.ChallangeData.GetChallanges();
+
+
+            //var toolbarBottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
+
+            /*   toolbarBottom.Title = "Photo Editing";
+               toolbarBottom.InflateMenu(Resource.Menu.photo_edit);
+               toolbarBottom.MenuItemClick += (sender, e) => {
+                   Toast.MakeText(this, "Bottom toolbar pressed: " + e.Item.TitleFormatted, ToastLength.Short).Show();
+               };*/
+
+        }
+
+        private void MoviesAdapter_ItemClick(object sender, int e)
+        {
+            var linearLayout = this.FindViewById<LinearLayout>(Resource.Id.main_content);
+
+            Toast.MakeText(this, "Top ActionBar pressed: " + challenges[e].Name.ToString(), ToastLength.Short).Show();
+        }
+
+        /// <Docs>The options menu in which you place your items.</Docs>
+		/// <returns>To be added.</returns>
+		/// <summary>
+		/// This is the menu for the Toolbar/Action Bar to use
+		/// </summary>
+		/// <param name="menu">Menu.</param>
+		public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.home, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

@@ -61,6 +61,24 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f040009
 			public const int abc_slide_out_top = 2130968585;
 			
+			// aapt resource value: 0x7f04000a
+			public const int design_bottom_sheet_slide_in = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int design_bottom_sheet_slide_out = 2130968587;
+			
+			// aapt resource value: 0x7f04000c
+			public const int design_fab_in = 2130968588;
+			
+			// aapt resource value: 0x7f04000d
+			public const int design_fab_out = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int design_snackbar_in = 2130968590;
+			
+			// aapt resource value: 0x7f04000f
+			public const int design_snackbar_out = 2130968591;
+			
 			static Animation()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -218,8 +236,26 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100a1
 			public const int barLength = 2130772129;
 			
+			// aapt resource value: 0x7f0100d9
+			public const int behavior_hideable = 2130772185;
+			
+			// aapt resource value: 0x7f0100ff
+			public const int behavior_overlapTop = 2130772223;
+			
+			// aapt resource value: 0x7f0100d8
+			public const int behavior_peekHeight = 2130772184;
+			
+			// aapt resource value: 0x7f0100f5
+			public const int borderWidth = 2130772213;
+			
 			// aapt resource value: 0x7f01005e
 			public const int borderlessButtonStyle = 2130772062;
+			
+			// aapt resource value: 0x7f0100ef
+			public const int bottomSheetDialogTheme = 2130772207;
+			
+			// aapt resource value: 0x7f0100f0
+			public const int bottomSheetStyle = 2130772208;
 			
 			// aapt resource value: 0x7f01005b
 			public const int buttonBarButtonStyle = 2130772059;
@@ -269,6 +305,12 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100c9
 			public const int collapseIcon = 2130772169;
 			
+			// aapt resource value: 0x7f0100e6
+			public const int collapsedTitleGravity = 2130772198;
+			
+			// aapt resource value: 0x7f0100e2
+			public const int collapsedTitleTextAppearance = 2130772194;
+			
 			// aapt resource value: 0x7f01009b
 			public const int color = 2130772123;
 			
@@ -311,8 +353,23 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f01001a
 			public const int contentInsetStart = 2130771994;
 			
+			// aapt resource value: 0x7f0100e3
+			public const int contentScrim = 2130772195;
+			
 			// aapt resource value: 0x7f010082
 			public const int controlBackground = 2130772098;
+			
+			// aapt resource value: 0x7f010115
+			public const int counterEnabled = 2130772245;
+			
+			// aapt resource value: 0x7f010116
+			public const int counterMaxLength = 2130772246;
+			
+			// aapt resource value: 0x7f010118
+			public const int counterOverflowTextAppearance = 2130772248;
+			
+			// aapt resource value: 0x7f010117
+			public const int counterTextAppearance = 2130772247;
 			
 			// aapt resource value: 0x7f010013
 			public const int customNavigationLayout = 2130771987;
@@ -365,8 +422,44 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f01001e
 			public const int elevation = 2130771998;
 			
+			// aapt resource value: 0x7f010113
+			public const int errorEnabled = 2130772243;
+			
+			// aapt resource value: 0x7f010114
+			public const int errorTextAppearance = 2130772244;
+			
 			// aapt resource value: 0x7f010022
 			public const int expandActivityOverflowButtonDrawable = 2130772002;
+			
+			// aapt resource value: 0x7f0100d5
+			public const int expanded = 2130772181;
+			
+			// aapt resource value: 0x7f0100e7
+			public const int expandedTitleGravity = 2130772199;
+			
+			// aapt resource value: 0x7f0100dc
+			public const int expandedTitleMargin = 2130772188;
+			
+			// aapt resource value: 0x7f0100e0
+			public const int expandedTitleMarginBottom = 2130772192;
+			
+			// aapt resource value: 0x7f0100df
+			public const int expandedTitleMarginEnd = 2130772191;
+			
+			// aapt resource value: 0x7f0100dd
+			public const int expandedTitleMarginStart = 2130772189;
+			
+			// aapt resource value: 0x7f0100de
+			public const int expandedTitleMarginTop = 2130772190;
+			
+			// aapt resource value: 0x7f0100e1
+			public const int expandedTitleTextAppearance = 2130772193;
+			
+			// aapt resource value: 0x7f0100f3
+			public const int fabSize = 2130772211;
+			
+			// aapt resource value: 0x7f0100f7
+			public const int foregroundInsidePadding = 2130772215;
 			
 			// aapt resource value: 0x7f01009e
 			public const int gapBetweenBars = 2130772126;
@@ -374,11 +467,23 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100b2
 			public const int goIcon = 2130772146;
 			
+			// aapt resource value: 0x7f0100fd
+			public const int headerLayout = 2130772221;
+			
 			// aapt resource value: 0x7f010005
 			public const int height = 2130771973;
 			
 			// aapt resource value: 0x7f010019
 			public const int hideOnContentScroll = 2130771993;
+			
+			// aapt resource value: 0x7f010119
+			public const int hintAnimationEnabled = 2130772249;
+			
+			// aapt resource value: 0x7f010112
+			public const int hintEnabled = 2130772242;
+			
+			// aapt resource value: 0x7f010111
+			public const int hintTextAppearance = 2130772241;
 			
 			// aapt resource value: 0x7f010058
 			public const int homeAsUpIndicator = 2130772056;
@@ -401,17 +506,59 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f010021
 			public const int initialActivityCount = 2130772001;
 			
+			// aapt resource value: 0x7f0100fe
+			public const int insetForeground = 2130772222;
+			
 			// aapt resource value: 0x7f010006
 			public const int isLightTheme = 2130771974;
 			
+			// aapt resource value: 0x7f0100fb
+			public const int itemBackground = 2130772219;
+			
+			// aapt resource value: 0x7f0100f9
+			public const int itemIconTint = 2130772217;
+			
 			// aapt resource value: 0x7f010018
 			public const int itemPadding = 2130771992;
+			
+			// aapt resource value: 0x7f0100fc
+			public const int itemTextAppearance = 2130772220;
+			
+			// aapt resource value: 0x7f0100fa
+			public const int itemTextColor = 2130772218;
+			
+			// aapt resource value: 0x7f0100e9
+			public const int keylines = 2130772201;
 			
 			// aapt resource value: 0x7f0100ad
 			public const int layout = 2130772141;
 			
 			// aapt resource value: 0x7f010000
 			public const int layoutManager = 2130771968;
+			
+			// aapt resource value: 0x7f0100ec
+			public const int layout_anchor = 2130772204;
+			
+			// aapt resource value: 0x7f0100ee
+			public const int layout_anchorGravity = 2130772206;
+			
+			// aapt resource value: 0x7f0100eb
+			public const int layout_behavior = 2130772203;
+			
+			// aapt resource value: 0x7f0100da
+			public const int layout_collapseMode = 2130772186;
+			
+			// aapt resource value: 0x7f0100db
+			public const int layout_collapseParallaxMultiplier = 2130772187;
+			
+			// aapt resource value: 0x7f0100ed
+			public const int layout_keyline = 2130772205;
+			
+			// aapt resource value: 0x7f0100d6
+			public const int layout_scrollFlags = 2130772182;
+			
+			// aapt resource value: 0x7f0100d7
+			public const int layout_scrollInterpolator = 2130772183;
 			
 			// aapt resource value: 0x7f010079
 			public const int listChoiceBackgroundIndicator = 2130772089;
@@ -449,11 +596,17 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100cd
 			public const int logoDescription = 2130772173;
 			
+			// aapt resource value: 0x7f010100
+			public const int maxActionInlineWidth = 2130772224;
+			
 			// aapt resource value: 0x7f0100c8
 			public const int maxButtonHeight = 2130772168;
 			
 			// aapt resource value: 0x7f0100a3
 			public const int measureWithLargestChild = 2130772131;
+			
+			// aapt resource value: 0x7f0100f8
+			public const int menu = 2130772216;
 			
 			// aapt resource value: 0x7f010025
 			public const int multiChoiceItemLayout = 2130772005;
@@ -497,6 +650,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100aa
 			public const int preserveIconSpacing = 2130772138;
 			
+			// aapt resource value: 0x7f0100f4
+			public const int pressedTranslationZ = 2130772212;
+			
 			// aapt resource value: 0x7f010017
 			public const int progressBarPadding = 2130771991;
 			
@@ -523,6 +679,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f010002
 			public const int reverseLayout = 2130771970;
+			
+			// aapt resource value: 0x7f0100f2
+			public const int rippleColor = 2130772210;
 			
 			// aapt resource value: 0x7f0100b4
 			public const int searchHintIcon = 2130772148;
@@ -578,6 +737,12 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100ac
 			public const int state_above_anchor = 2130772140;
 			
+			// aapt resource value: 0x7f0100ea
+			public const int statusBarBackground = 2130772202;
+			
+			// aapt resource value: 0x7f0100e4
+			public const int statusBarScrim = 2130772196;
+			
 			// aapt resource value: 0x7f0100b9
 			public const int submitBackground = 2130772153;
 			
@@ -608,6 +773,54 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0100bc
 			public const int switchTextAppearance = 2130772156;
 			
+			// aapt resource value: 0x7f010104
+			public const int tabBackground = 2130772228;
+			
+			// aapt resource value: 0x7f010103
+			public const int tabContentStart = 2130772227;
+			
+			// aapt resource value: 0x7f010106
+			public const int tabGravity = 2130772230;
+			
+			// aapt resource value: 0x7f010101
+			public const int tabIndicatorColor = 2130772225;
+			
+			// aapt resource value: 0x7f010102
+			public const int tabIndicatorHeight = 2130772226;
+			
+			// aapt resource value: 0x7f010108
+			public const int tabMaxWidth = 2130772232;
+			
+			// aapt resource value: 0x7f010107
+			public const int tabMinWidth = 2130772231;
+			
+			// aapt resource value: 0x7f010105
+			public const int tabMode = 2130772229;
+			
+			// aapt resource value: 0x7f010110
+			public const int tabPadding = 2130772240;
+			
+			// aapt resource value: 0x7f01010f
+			public const int tabPaddingBottom = 2130772239;
+			
+			// aapt resource value: 0x7f01010e
+			public const int tabPaddingEnd = 2130772238;
+			
+			// aapt resource value: 0x7f01010c
+			public const int tabPaddingStart = 2130772236;
+			
+			// aapt resource value: 0x7f01010d
+			public const int tabPaddingTop = 2130772237;
+			
+			// aapt resource value: 0x7f01010b
+			public const int tabSelectedTextColor = 2130772235;
+			
+			// aapt resource value: 0x7f010109
+			public const int tabTextAppearance = 2130772233;
+			
+			// aapt resource value: 0x7f01010a
+			public const int tabTextColor = 2130772234;
+			
 			// aapt resource value: 0x7f010029
 			public const int textAllCaps = 2130772009;
 			
@@ -632,6 +845,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f010087
 			public const int textColorAlertDialogListItem = 2130772103;
 			
+			// aapt resource value: 0x7f0100f1
+			public const int textColorError = 2130772209;
+			
 			// aapt resource value: 0x7f01006b
 			public const int textColorSearchUrl = 2130772075;
 			
@@ -646,6 +862,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f010007
 			public const int title = 2130771975;
+			
+			// aapt resource value: 0x7f0100e8
+			public const int titleEnabled = 2130772200;
 			
 			// aapt resource value: 0x7f0100c7
 			public const int titleMarginBottom = 2130772167;
@@ -671,6 +890,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f01000b
 			public const int titleTextStyle = 2130771979;
 			
+			// aapt resource value: 0x7f0100e5
+			public const int toolbarId = 2130772197;
+			
 			// aapt resource value: 0x7f010063
 			public const int toolbarNavigationButtonStyle = 2130772067;
 			
@@ -679,6 +901,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f0100ba
 			public const int track = 2130772154;
+			
+			// aapt resource value: 0x7f0100f6
+			public const int useCompatPadding = 2130772214;
 			
 			// aapt resource value: 0x7f0100b5
 			public const int voiceIcon = 2130772149;
@@ -763,29 +988,29 @@ namespace CheckItAndroidApp
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b003a
-			public const int abc_background_cache_hint_selector_material_dark = 2131427386;
+			// aapt resource value: 0x7f0b0044
+			public const int abc_background_cache_hint_selector_material_dark = 2131427396;
 			
-			// aapt resource value: 0x7f0b003b
-			public const int abc_background_cache_hint_selector_material_light = 2131427387;
+			// aapt resource value: 0x7f0b0045
+			public const int abc_background_cache_hint_selector_material_light = 2131427397;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b003c
-			public const int abc_primary_text_disable_only_material_dark = 2131427388;
+			// aapt resource value: 0x7f0b0046
+			public const int abc_primary_text_disable_only_material_dark = 2131427398;
 			
-			// aapt resource value: 0x7f0b003d
-			public const int abc_primary_text_disable_only_material_light = 2131427389;
+			// aapt resource value: 0x7f0b0047
+			public const int abc_primary_text_disable_only_material_light = 2131427399;
 			
-			// aapt resource value: 0x7f0b003e
-			public const int abc_primary_text_material_dark = 2131427390;
+			// aapt resource value: 0x7f0b0048
+			public const int abc_primary_text_material_dark = 2131427400;
 			
-			// aapt resource value: 0x7f0b003f
-			public const int abc_primary_text_material_light = 2131427391;
+			// aapt resource value: 0x7f0b0049
+			public const int abc_primary_text_material_light = 2131427401;
 			
-			// aapt resource value: 0x7f0b0040
-			public const int abc_search_url_text = 2131427392;
+			// aapt resource value: 0x7f0b004a
+			public const int abc_search_url_text = 2131427402;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -796,11 +1021,11 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b0041
-			public const int abc_secondary_text_material_dark = 2131427393;
+			// aapt resource value: 0x7f0b004b
+			public const int abc_secondary_text_material_dark = 2131427403;
 			
-			// aapt resource value: 0x7f0b0042
-			public const int abc_secondary_text_material_light = 2131427394;
+			// aapt resource value: 0x7f0b004c
+			public const int abc_secondary_text_material_light = 2131427404;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -843,6 +1068,36 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f0b0011
 			public const int button_material_light = 2131427345;
+			
+			// aapt resource value: 0x7f0b003a
+			public const int design_fab_shadow_end_color = 2131427386;
+			
+			// aapt resource value: 0x7f0b003b
+			public const int design_fab_shadow_mid_color = 2131427387;
+			
+			// aapt resource value: 0x7f0b003c
+			public const int design_fab_shadow_start_color = 2131427388;
+			
+			// aapt resource value: 0x7f0b003d
+			public const int design_fab_stroke_end_inner_color = 2131427389;
+			
+			// aapt resource value: 0x7f0b003e
+			public const int design_fab_stroke_end_outer_color = 2131427390;
+			
+			// aapt resource value: 0x7f0b003f
+			public const int design_fab_stroke_top_inner_color = 2131427391;
+			
+			// aapt resource value: 0x7f0b0040
+			public const int design_fab_stroke_top_outer_color = 2131427392;
+			
+			// aapt resource value: 0x7f0b0041
+			public const int design_snackbar_background_color = 2131427393;
+			
+			// aapt resource value: 0x7f0b0042
+			public const int design_textinput_error_color_dark = 2131427394;
+			
+			// aapt resource value: 0x7f0b0043
+			public const int design_textinput_error_color_light = 2131427395;
 			
 			// aapt resource value: 0x7f0b0012
 			public const int dim_foreground_disabled_material_dark = 2131427346;
@@ -958,11 +1213,11 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b0043
-			public const int switch_thumb_material_dark = 2131427395;
+			// aapt resource value: 0x7f0b004d
+			public const int switch_thumb_material_dark = 2131427405;
 			
-			// aapt resource value: 0x7f0b0044
-			public const int switch_thumb_material_light = 2131427396;
+			// aapt resource value: 0x7f0b004e
+			public const int switch_thumb_material_light = 2131427406;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;
@@ -1183,6 +1438,93 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f050007
 			public const int abc_text_size_title_material_toolbar = 2131034119;
+			
+			// aapt resource value: 0x7f050056
+			public const int design_appbar_elevation = 2131034198;
+			
+			// aapt resource value: 0x7f050057
+			public const int design_bottom_sheet_modal_elevation = 2131034199;
+			
+			// aapt resource value: 0x7f050058
+			public const int design_bottom_sheet_modal_peek_height = 2131034200;
+			
+			// aapt resource value: 0x7f050059
+			public const int design_fab_border_width = 2131034201;
+			
+			// aapt resource value: 0x7f05005a
+			public const int design_fab_elevation = 2131034202;
+			
+			// aapt resource value: 0x7f05005b
+			public const int design_fab_image_size = 2131034203;
+			
+			// aapt resource value: 0x7f05005c
+			public const int design_fab_size_mini = 2131034204;
+			
+			// aapt resource value: 0x7f05005d
+			public const int design_fab_size_normal = 2131034205;
+			
+			// aapt resource value: 0x7f05005e
+			public const int design_fab_translation_z_pressed = 2131034206;
+			
+			// aapt resource value: 0x7f05005f
+			public const int design_navigation_elevation = 2131034207;
+			
+			// aapt resource value: 0x7f050060
+			public const int design_navigation_icon_padding = 2131034208;
+			
+			// aapt resource value: 0x7f050061
+			public const int design_navigation_icon_size = 2131034209;
+			
+			// aapt resource value: 0x7f05004e
+			public const int design_navigation_max_width = 2131034190;
+			
+			// aapt resource value: 0x7f050062
+			public const int design_navigation_padding_bottom = 2131034210;
+			
+			// aapt resource value: 0x7f050063
+			public const int design_navigation_separator_vertical_padding = 2131034211;
+			
+			// aapt resource value: 0x7f05004f
+			public const int design_snackbar_action_inline_max_width = 2131034191;
+			
+			// aapt resource value: 0x7f050050
+			public const int design_snackbar_background_corner_radius = 2131034192;
+			
+			// aapt resource value: 0x7f050064
+			public const int design_snackbar_elevation = 2131034212;
+			
+			// aapt resource value: 0x7f050051
+			public const int design_snackbar_extra_spacing_horizontal = 2131034193;
+			
+			// aapt resource value: 0x7f050052
+			public const int design_snackbar_max_width = 2131034194;
+			
+			// aapt resource value: 0x7f050053
+			public const int design_snackbar_min_width = 2131034195;
+			
+			// aapt resource value: 0x7f050065
+			public const int design_snackbar_padding_horizontal = 2131034213;
+			
+			// aapt resource value: 0x7f050066
+			public const int design_snackbar_padding_vertical = 2131034214;
+			
+			// aapt resource value: 0x7f050054
+			public const int design_snackbar_padding_vertical_2lines = 2131034196;
+			
+			// aapt resource value: 0x7f050067
+			public const int design_snackbar_text_size = 2131034215;
+			
+			// aapt resource value: 0x7f050068
+			public const int design_tab_max_width = 2131034216;
+			
+			// aapt resource value: 0x7f050055
+			public const int design_tab_scrollable_min_width = 2131034197;
+			
+			// aapt resource value: 0x7f050069
+			public const int design_tab_text_size = 2131034217;
+			
+			// aapt resource value: 0x7f05006a
+			public const int design_tab_text_size_2line = 2131034218;
 			
 			// aapt resource value: 0x7f050046
 			public const int disabled_alpha_material_dark = 2131034182;
@@ -1453,10 +1795,16 @@ namespace CheckItAndroidApp
 			public const int abc_textfield_search_material = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int Icon = 2130837578;
+			public const int design_fab_background = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int notification_template_icon_bg = 2130837579;
+			public const int design_snackbar_background = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int Icon = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int notification_template_icon_bg = 2130837581;
 			
 			static Drawable()
 			{
@@ -1471,35 +1819,35 @@ namespace CheckItAndroidApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060054
-			public const int action0 = 2131099732;
+			// aapt resource value: 0x7f060076
+			public const int action0 = 2131099766;
 			
-			// aapt resource value: 0x7f060042
-			public const int action_bar = 2131099714;
+			// aapt resource value: 0x7f06005a
+			public const int action_bar = 2131099738;
 			
 			// aapt resource value: 0x7f060001
 			public const int action_bar_activity_content = 2131099649;
 			
-			// aapt resource value: 0x7f060041
-			public const int action_bar_container = 2131099713;
+			// aapt resource value: 0x7f060059
+			public const int action_bar_container = 2131099737;
 			
-			// aapt resource value: 0x7f06003d
-			public const int action_bar_root = 2131099709;
+			// aapt resource value: 0x7f060055
+			public const int action_bar_root = 2131099733;
 			
 			// aapt resource value: 0x7f060002
 			public const int action_bar_spinner = 2131099650;
 			
-			// aapt resource value: 0x7f060023
-			public const int action_bar_subtitle = 2131099683;
+			// aapt resource value: 0x7f06003b
+			public const int action_bar_subtitle = 2131099707;
 			
-			// aapt resource value: 0x7f060022
-			public const int action_bar_title = 2131099682;
+			// aapt resource value: 0x7f06003a
+			public const int action_bar_title = 2131099706;
 			
-			// aapt resource value: 0x7f060043
-			public const int action_context_bar = 2131099715;
+			// aapt resource value: 0x7f06005b
+			public const int action_context_bar = 2131099739;
 			
-			// aapt resource value: 0x7f060058
-			public const int action_divider = 2131099736;
+			// aapt resource value: 0x7f06007a
+			public const int action_divider = 2131099770;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1507,131 +1855,209 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060004
 			public const int action_menu_presenter = 2131099652;
 			
-			// aapt resource value: 0x7f06003f
-			public const int action_mode_bar = 2131099711;
+			// aapt resource value: 0x7f060057
+			public const int action_mode_bar = 2131099735;
 			
-			// aapt resource value: 0x7f06003e
-			public const int action_mode_bar_stub = 2131099710;
+			// aapt resource value: 0x7f060056
+			public const int action_mode_bar_stub = 2131099734;
 			
-			// aapt resource value: 0x7f060024
-			public const int action_mode_close_button = 2131099684;
+			// aapt resource value: 0x7f06003c
+			public const int action_mode_close_button = 2131099708;
 			
-			// aapt resource value: 0x7f060025
-			public const int activity_chooser_view_content = 2131099685;
+			// aapt resource value: 0x7f06003d
+			public const int activity_chooser_view_content = 2131099709;
 			
-			// aapt resource value: 0x7f060031
-			public const int alertTitle = 2131099697;
-			
-			// aapt resource value: 0x7f06001d
-			public const int always = 2131099677;
-			
-			// aapt resource value: 0x7f06001a
-			public const int beginning = 2131099674;
-			
-			// aapt resource value: 0x7f06002c
-			public const int buttonPanel = 2131099692;
-			
-			// aapt resource value: 0x7f060055
-			public const int cancel_action = 2131099733;
-			
-			// aapt resource value: 0x7f06003a
-			public const int checkbox = 2131099706;
-			
-			// aapt resource value: 0x7f06005b
-			public const int chronometer = 2131099739;
+			// aapt resource value: 0x7f060049
+			public const int alertTitle = 2131099721;
 			
 			// aapt resource value: 0x7f06001e
-			public const int collapseActionView = 2131099678;
-			
-			// aapt resource value: 0x7f060032
-			public const int contentPanel = 2131099698;
-			
-			// aapt resource value: 0x7f060038
-			public const int custom = 2131099704;
-			
-			// aapt resource value: 0x7f060037
-			public const int customPanel = 2131099703;
-			
-			// aapt resource value: 0x7f060040
-			public const int decor_content_parent = 2131099712;
-			
-			// aapt resource value: 0x7f060028
-			public const int default_activity_button = 2131099688;
-			
-			// aapt resource value: 0x7f06000d
-			public const int disableHome = 2131099661;
-			
-			// aapt resource value: 0x7f060044
-			public const int edit_query = 2131099716;
+			public const int always = 2131099678;
 			
 			// aapt resource value: 0x7f06001b
-			public const int end = 2131099675;
+			public const int beginning = 2131099675;
 			
-			// aapt resource value: 0x7f060060
-			public const int end_padder = 2131099744;
+			// aapt resource value: 0x7f06002a
+			public const int bottom = 2131099690;
 			
-			// aapt resource value: 0x7f060026
-			public const int expand_activities_button = 2131099686;
+			// aapt resource value: 0x7f060044
+			public const int buttonPanel = 2131099716;
 			
-			// aapt resource value: 0x7f060039
-			public const int expanded_menu = 2131099705;
+			// aapt resource value: 0x7f060077
+			public const int cancel_action = 2131099767;
+			
+			// aapt resource value: 0x7f06002b
+			public const int center = 2131099691;
+			
+			// aapt resource value: 0x7f06002c
+			public const int center_horizontal = 2131099692;
+			
+			// aapt resource value: 0x7f06002d
+			public const int center_vertical = 2131099693;
+			
+			// aapt resource value: 0x7f060069
+			public const int challengeName = 2131099753;
+			
+			// aapt resource value: 0x7f060052
+			public const int checkbox = 2131099730;
+			
+			// aapt resource value: 0x7f06007d
+			public const int chronometer = 2131099773;
+			
+			// aapt resource value: 0x7f060033
+			public const int clip_horizontal = 2131099699;
+			
+			// aapt resource value: 0x7f060034
+			public const int clip_vertical = 2131099700;
+			
+			// aapt resource value: 0x7f06001f
+			public const int collapseActionView = 2131099679;
+			
+			// aapt resource value: 0x7f06004a
+			public const int contentPanel = 2131099722;
+			
+			// aapt resource value: 0x7f060050
+			public const int custom = 2131099728;
+			
+			// aapt resource value: 0x7f06004f
+			public const int customPanel = 2131099727;
+			
+			// aapt resource value: 0x7f060058
+			public const int decor_content_parent = 2131099736;
+			
+			// aapt resource value: 0x7f060040
+			public const int default_activity_button = 2131099712;
+			
+			// aapt resource value: 0x7f06006b
+			public const int design_bottom_sheet = 2131099755;
+			
+			// aapt resource value: 0x7f060072
+			public const int design_menu_item_action_area = 2131099762;
+			
+			// aapt resource value: 0x7f060071
+			public const int design_menu_item_action_area_stub = 2131099761;
+			
+			// aapt resource value: 0x7f060070
+			public const int design_menu_item_text = 2131099760;
+			
+			// aapt resource value: 0x7f06006f
+			public const int design_navigation_view = 2131099759;
+			
+			// aapt resource value: 0x7f06000e
+			public const int disableHome = 2131099662;
+			
+			// aapt resource value: 0x7f06005c
+			public const int edit_query = 2131099740;
+			
+			// aapt resource value: 0x7f06001c
+			public const int end = 2131099676;
+			
+			// aapt resource value: 0x7f060082
+			public const int end_padder = 2131099778;
+			
+			// aapt resource value: 0x7f060023
+			public const int enterAlways = 2131099683;
+			
+			// aapt resource value: 0x7f060024
+			public const int enterAlwaysCollapsed = 2131099684;
+			
+			// aapt resource value: 0x7f060025
+			public const int exitUntilCollapsed = 2131099685;
+			
+			// aapt resource value: 0x7f06003e
+			public const int expand_activities_button = 2131099710;
+			
+			// aapt resource value: 0x7f060051
+			public const int expanded_menu = 2131099729;
+			
+			// aapt resource value: 0x7f060035
+			public const int fill = 2131099701;
+			
+			// aapt resource value: 0x7f060036
+			public const int fill_horizontal = 2131099702;
+			
+			// aapt resource value: 0x7f06002e
+			public const int fill_vertical = 2131099694;
+			
+			// aapt resource value: 0x7f060038
+			public const int @fixed = 2131099704;
 			
 			// aapt resource value: 0x7f060005
 			public const int home = 2131099653;
 			
-			// aapt resource value: 0x7f06000e
-			public const int homeAsUp = 2131099662;
+			// aapt resource value: 0x7f06000f
+			public const int homeAsUp = 2131099663;
 			
-			// aapt resource value: 0x7f06002a
-			public const int icon = 2131099690;
+			// aapt resource value: 0x7f060042
+			public const int icon = 2131099714;
 			
-			// aapt resource value: 0x7f06001f
-			public const int ifRoom = 2131099679;
+			// aapt resource value: 0x7f060020
+			public const int ifRoom = 2131099680;
 			
-			// aapt resource value: 0x7f060027
-			public const int image = 2131099687;
+			// aapt resource value: 0x7f06003f
+			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f06005f
-			public const int info = 2131099743;
+			// aapt resource value: 0x7f060081
+			public const int info = 2131099777;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f060059
-			public const int line1 = 2131099737;
+			// aapt resource value: 0x7f06002f
+			public const int left = 2131099695;
 			
-			// aapt resource value: 0x7f06005d
-			public const int line3 = 2131099741;
+			// aapt resource value: 0x7f06007b
+			public const int line1 = 2131099771;
 			
-			// aapt resource value: 0x7f06000a
-			public const int listMode = 2131099658;
-			
-			// aapt resource value: 0x7f060029
-			public const int list_item = 2131099689;
-			
-			// aapt resource value: 0x7f060052
-			public const int main_content = 2131099730;
-			
-			// aapt resource value: 0x7f060057
-			public const int media_actions = 2131099735;
-			
-			// aapt resource value: 0x7f06001c
-			public const int middle = 2131099676;
-			
-			// aapt resource value: 0x7f060015
-			public const int multiply = 2131099669;
-			
-			// aapt resource value: 0x7f060020
-			public const int never = 2131099680;
-			
-			// aapt resource value: 0x7f06000f
-			public const int none = 2131099663;
+			// aapt resource value: 0x7f06007f
+			public const int line3 = 2131099775;
 			
 			// aapt resource value: 0x7f06000b
-			public const int normal = 2131099659;
+			public const int listMode = 2131099659;
 			
-			// aapt resource value: 0x7f06002e
-			public const int parentPanel = 2131099694;
+			// aapt resource value: 0x7f060041
+			public const int list_item = 2131099713;
+			
+			// aapt resource value: 0x7f060074
+			public const int main_content = 2131099764;
+			
+			// aapt resource value: 0x7f060079
+			public const int media_actions = 2131099769;
+			
+			// aapt resource value: 0x7f060084
+			public const int menu_settings = 2131099780;
+			
+			// aapt resource value: 0x7f060083
+			public const int menu_share = 2131099779;
+			
+			// aapt resource value: 0x7f06001d
+			public const int middle = 2131099677;
+			
+			// aapt resource value: 0x7f060037
+			public const int mini = 2131099703;
+			
+			// aapt resource value: 0x7f060016
+			public const int multiply = 2131099670;
+			
+			// aapt resource value: 0x7f06006e
+			public const int navigation_header_container = 2131099758;
+			
+			// aapt resource value: 0x7f060021
+			public const int never = 2131099681;
+			
+			// aapt resource value: 0x7f060010
+			public const int none = 2131099664;
+			
+			// aapt resource value: 0x7f06000c
+			public const int normal = 2131099660;
+			
+			// aapt resource value: 0x7f060028
+			public const int parallax = 2131099688;
+			
+			// aapt resource value: 0x7f060046
+			public const int parentPanel = 2131099718;
+			
+			// aapt resource value: 0x7f060029
+			public const int pin = 2131099689;
 			
 			// aapt resource value: 0x7f060006
 			public const int progress_circular = 2131099654;
@@ -1639,128 +2065,158 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060007
 			public const int progress_horizontal = 2131099655;
 			
-			// aapt resource value: 0x7f06003c
-			public const int radio = 2131099708;
+			// aapt resource value: 0x7f060054
+			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f060053
-			public const int recyclerView = 2131099731;
+			// aapt resource value: 0x7f060075
+			public const int recyclerView = 2131099765;
 			
-			// aapt resource value: 0x7f060016
-			public const int screen = 2131099670;
+			// aapt resource value: 0x7f060030
+			public const int right = 2131099696;
 			
-			// aapt resource value: 0x7f060036
-			public const int scrollIndicatorDown = 2131099702;
+			// aapt resource value: 0x7f060017
+			public const int screen = 2131099671;
 			
-			// aapt resource value: 0x7f060033
-			public const int scrollIndicatorUp = 2131099699;
-			
-			// aapt resource value: 0x7f060034
-			public const int scrollView = 2131099700;
-			
-			// aapt resource value: 0x7f060046
-			public const int search_badge = 2131099718;
-			
-			// aapt resource value: 0x7f060045
-			public const int search_bar = 2131099717;
-			
-			// aapt resource value: 0x7f060047
-			public const int search_button = 2131099719;
-			
-			// aapt resource value: 0x7f06004c
-			public const int search_close_btn = 2131099724;
-			
-			// aapt resource value: 0x7f060048
-			public const int search_edit_frame = 2131099720;
+			// aapt resource value: 0x7f060026
+			public const int scroll = 2131099686;
 			
 			// aapt resource value: 0x7f06004e
-			public const int search_go_btn = 2131099726;
-			
-			// aapt resource value: 0x7f060049
-			public const int search_mag_icon = 2131099721;
-			
-			// aapt resource value: 0x7f06004a
-			public const int search_plate = 2131099722;
+			public const int scrollIndicatorDown = 2131099726;
 			
 			// aapt resource value: 0x7f06004b
-			public const int search_src_text = 2131099723;
+			public const int scrollIndicatorUp = 2131099723;
 			
-			// aapt resource value: 0x7f06004f
-			public const int search_voice_btn = 2131099727;
+			// aapt resource value: 0x7f06004c
+			public const int scrollView = 2131099724;
 			
-			// aapt resource value: 0x7f060050
-			public const int select_dialog_listview = 2131099728;
+			// aapt resource value: 0x7f060039
+			public const int scrollable = 2131099705;
 			
-			// aapt resource value: 0x7f06003b
-			public const int shortcut = 2131099707;
+			// aapt resource value: 0x7f06005e
+			public const int search_badge = 2131099742;
 			
-			// aapt resource value: 0x7f060010
-			public const int showCustom = 2131099664;
+			// aapt resource value: 0x7f06005d
+			public const int search_bar = 2131099741;
+			
+			// aapt resource value: 0x7f06005f
+			public const int search_button = 2131099743;
+			
+			// aapt resource value: 0x7f060064
+			public const int search_close_btn = 2131099748;
+			
+			// aapt resource value: 0x7f060060
+			public const int search_edit_frame = 2131099744;
+			
+			// aapt resource value: 0x7f060066
+			public const int search_go_btn = 2131099750;
+			
+			// aapt resource value: 0x7f060061
+			public const int search_mag_icon = 2131099745;
+			
+			// aapt resource value: 0x7f060062
+			public const int search_plate = 2131099746;
+			
+			// aapt resource value: 0x7f060063
+			public const int search_src_text = 2131099747;
+			
+			// aapt resource value: 0x7f060067
+			public const int search_voice_btn = 2131099751;
+			
+			// aapt resource value: 0x7f060068
+			public const int select_dialog_listview = 2131099752;
+			
+			// aapt resource value: 0x7f060053
+			public const int shortcut = 2131099731;
 			
 			// aapt resource value: 0x7f060011
-			public const int showHome = 2131099665;
+			public const int showCustom = 2131099665;
 			
 			// aapt resource value: 0x7f060012
-			public const int showTitle = 2131099666;
+			public const int showHome = 2131099666;
 			
-			// aapt resource value: 0x7f06002d
-			public const int spacer = 2131099693;
+			// aapt resource value: 0x7f060013
+			public const int showTitle = 2131099667;
+			
+			// aapt resource value: 0x7f06006d
+			public const int snackbar_action = 2131099757;
+			
+			// aapt resource value: 0x7f06006c
+			public const int snackbar_text = 2131099756;
+			
+			// aapt resource value: 0x7f060027
+			public const int snap = 2131099687;
+			
+			// aapt resource value: 0x7f060045
+			public const int spacer = 2131099717;
 			
 			// aapt resource value: 0x7f060008
 			public const int split_action_bar = 2131099656;
 			
-			// aapt resource value: 0x7f060017
-			public const int src_atop = 2131099671;
-			
 			// aapt resource value: 0x7f060018
-			public const int src_in = 2131099672;
+			public const int src_atop = 2131099672;
 			
 			// aapt resource value: 0x7f060019
-			public const int src_over = 2131099673;
+			public const int src_in = 2131099673;
 			
-			// aapt resource value: 0x7f060056
-			public const int status_bar_latest_event_content = 2131099734;
+			// aapt resource value: 0x7f06001a
+			public const int src_over = 2131099674;
+			
+			// aapt resource value: 0x7f060031
+			public const int start = 2131099697;
+			
+			// aapt resource value: 0x7f060078
+			public const int status_bar_latest_event_content = 2131099768;
+			
+			// aapt resource value: 0x7f060065
+			public const int submit_area = 2131099749;
+			
+			// aapt resource value: 0x7f06000d
+			public const int tabMode = 2131099661;
+			
+			// aapt resource value: 0x7f060080
+			public const int text = 2131099776;
+			
+			// aapt resource value: 0x7f06007e
+			public const int text2 = 2131099774;
 			
 			// aapt resource value: 0x7f06004d
-			public const int submit_area = 2131099725;
+			public const int textSpacerNoButtons = 2131099725;
 			
-			// aapt resource value: 0x7f06000c
-			public const int tabMode = 2131099660;
+			// aapt resource value: 0x7f06007c
+			public const int time = 2131099772;
 			
-			// aapt resource value: 0x7f06005e
-			public const int text = 2131099742;
+			// aapt resource value: 0x7f060043
+			public const int title = 2131099715;
 			
-			// aapt resource value: 0x7f06005c
-			public const int text2 = 2131099740;
+			// aapt resource value: 0x7f060048
+			public const int title_template = 2131099720;
 			
-			// aapt resource value: 0x7f060035
-			public const int textSpacerNoButtons = 2131099701;
+			// aapt resource value: 0x7f060073
+			public const int toolbar = 2131099763;
 			
-			// aapt resource value: 0x7f06005a
-			public const int time = 2131099738;
+			// aapt resource value: 0x7f060032
+			public const int top = 2131099698;
 			
-			// aapt resource value: 0x7f06002b
-			public const int title = 2131099691;
+			// aapt resource value: 0x7f060047
+			public const int topPanel = 2131099719;
 			
-			// aapt resource value: 0x7f060030
-			public const int title_template = 2131099696;
-			
-			// aapt resource value: 0x7f060051
-			public const int toolbar = 2131099729;
-			
-			// aapt resource value: 0x7f06002f
-			public const int topPanel = 2131099695;
+			// aapt resource value: 0x7f06006a
+			public const int touch_outside = 2131099754;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
 			
-			// aapt resource value: 0x7f060013
-			public const int useLogo = 2131099667;
-			
-			// aapt resource value: 0x7f060021
-			public const int withText = 2131099681;
-			
 			// aapt resource value: 0x7f060014
-			public const int wrap_content = 2131099668;
+			public const int useLogo = 2131099668;
+			
+			// aapt resource value: 0x7f06000a
+			public const int view_offset_helper = 2131099658;
+			
+			// aapt resource value: 0x7f060022
+			public const int withText = 2131099682;
+			
+			// aapt resource value: 0x7f060015
+			public const int wrap_content = 2131099669;
 			
 			static Id()
 			{
@@ -1784,8 +2240,14 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0a0000
 			public const int abc_max_action_buttons = 2131361792;
 			
+			// aapt resource value: 0x7f0a0006
+			public const int bottom_sheet_slide_duration = 2131361798;
+			
 			// aapt resource value: 0x7f0a0003
 			public const int cancel_button_image_alpha = 2131361795;
+			
+			// aapt resource value: 0x7f0a0005
+			public const int design_snackbar_text_max_lines = 2131361797;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int status_bar_notification_info_maxnum = 2131361796;
@@ -1879,46 +2341,85 @@ namespace CheckItAndroidApp
 			public const int abc_select_dialog_material = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int Main = 2130903065;
+			public const int ChallengeRow = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int notification_media_action = 2130903066;
+			public const int design_bottom_sheet_dialog = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int notification_media_cancel_action = 2130903067;
+			public const int design_layout_snackbar = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int notification_template_big_media = 2130903068;
+			public const int design_layout_snackbar_include = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int notification_template_big_media_narrow = 2130903069;
+			public const int design_layout_tab_icon = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int notification_template_lines = 2130903070;
+			public const int design_layout_tab_text = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_template_media = 2130903071;
+			public const int design_menu_item_action_area = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_template_part_chronometer = 2130903072;
+			public const int design_navigation_item = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_part_time = 2130903073;
+			public const int design_navigation_item_header = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int select_dialog_item_material = 2130903074;
+			public const int design_navigation_item_separator = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int select_dialog_multichoice_material = 2130903075;
+			public const int design_navigation_item_subheader = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int select_dialog_singlechoice_material = 2130903076;
+			public const int design_navigation_menu = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int support_simple_spinner_dropdown_item = 2130903077;
+			public const int design_navigation_menu_item = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int Toolbar = 2130903078;
+			public const int Main = 2130903078;
+			
+			// aapt resource value: 0x7f030027
+			public const int notification_media_action = 2130903079;
+			
+			// aapt resource value: 0x7f030028
+			public const int notification_media_cancel_action = 2130903080;
+			
+			// aapt resource value: 0x7f030029
+			public const int notification_template_big_media = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int notification_template_big_media_narrow = 2130903082;
+			
+			// aapt resource value: 0x7f03002b
+			public const int notification_template_lines = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int notification_template_media = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int notification_template_part_chronometer = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int notification_template_part_time = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int select_dialog_item_material = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int select_dialog_multichoice_material = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int select_dialog_singlechoice_material = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int support_simple_spinner_dropdown_item = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int Toolbar = 2130903091;
 			
 			static Layout()
 			{
@@ -1930,17 +2431,36 @@ namespace CheckItAndroidApp
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0c0000
+			public const int home = 2131492864;
+			
+			// aapt resource value: 0x7f0c0001
+			public const int photo_edit = 2131492865;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070015
-			public const int ApplicationName = 2131165205;
+			// aapt resource value: 0x7f070018
+			public const int ApplicationName = 2131165208;
 			
-			// aapt resource value: 0x7f070014
-			public const int Hello = 2131165204;
+			// aapt resource value: 0x7f070017
+			public const int Hello = 2131165207;
 			
-			// aapt resource value: 0x7f070016
-			public const int SecretString = 2131165206;
+			// aapt resource value: 0x7f070019
+			public const int SecretString = 2131165209;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
@@ -1999,6 +2519,15 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f070012
 			public const int abc_toolbar_collapse_description = 2131165202;
 			
+			// aapt resource value: 0x7f070014
+			public const int appbar_scrolling_view_behavior = 2131165204;
+			
+			// aapt resource value: 0x7f070015
+			public const int bottom_sheet_behavior = 2131165205;
+			
+			// aapt resource value: 0x7f070016
+			public const int character_counter_pattern = 2131165206;
+			
 			// aapt resource value: 0x7f070013
 			public const int status_bar_notification_info_overflow = 2131165203;
 			
@@ -2026,6 +2555,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f090080
 			public const int Animation_AppCompat_DropDownUp = 2131296384;
+			
+			// aapt resource value: 0x7f09013b
+			public const int Animation_Design_BottomSheetDialog = 2131296571;
 			
 			// aapt resource value: 0x7f090081
 			public const int Base_AlertDialog_AppCompat = 2131296385;
@@ -2441,11 +2973,11 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f090079
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131296377;
 			
-			// aapt resource value: 0x7f09013a
-			public const int MyTheme = 2131296570;
+			// aapt resource value: 0x7f09013c
+			public const int Base_Widget_Design_TabLayout = 2131296572;
 			
-			// aapt resource value: 0x7f09013b
-			public const int MyTheme_Base = 2131296571;
+			// aapt resource value: 0x7f090153
+			public const int MyTheme = 2131296595;
 			
 			// aapt resource value: 0x7f090017
 			public const int Platform_AppCompat = 2131296279;
@@ -2651,6 +3183,27 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0900dd
 			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131296477;
 			
+			// aapt resource value: 0x7f09013d
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131296573;
+			
+			// aapt resource value: 0x7f09013e
+			public const int TextAppearance_Design_Counter = 2131296574;
+			
+			// aapt resource value: 0x7f09013f
+			public const int TextAppearance_Design_Counter_Overflow = 2131296575;
+			
+			// aapt resource value: 0x7f090140
+			public const int TextAppearance_Design_Error = 2131296576;
+			
+			// aapt resource value: 0x7f090141
+			public const int TextAppearance_Design_Hint = 2131296577;
+			
+			// aapt resource value: 0x7f090142
+			public const int TextAppearance_Design_Snackbar_Message = 2131296578;
+			
+			// aapt resource value: 0x7f090143
+			public const int TextAppearance_Design_Tab = 2131296579;
+			
 			// aapt resource value: 0x7f090023
 			public const int TextAppearance_StatusBar_EventContent = 2131296291;
 			
@@ -2737,6 +3290,24 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f0900ee
 			public const int Theme_AppCompat_NoActionBar = 2131296494;
+			
+			// aapt resource value: 0x7f090144
+			public const int Theme_Design = 2131296580;
+			
+			// aapt resource value: 0x7f090145
+			public const int Theme_Design_BottomSheetDialog = 2131296581;
+			
+			// aapt resource value: 0x7f090146
+			public const int Theme_Design_Light = 2131296582;
+			
+			// aapt resource value: 0x7f090147
+			public const int Theme_Design_Light_BottomSheetDialog = 2131296583;
+			
+			// aapt resource value: 0x7f090148
+			public const int Theme_Design_Light_NoActionBar = 2131296584;
+			
+			// aapt resource value: 0x7f090149
+			public const int Theme_Design_NoActionBar = 2131296585;
 			
 			// aapt resource value: 0x7f0900ef
 			public const int ThemeOverlay_AppCompat = 2131296495;
@@ -2963,6 +3534,36 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f090139
 			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131296569;
 			
+			// aapt resource value: 0x7f09014a
+			public const int Widget_Design_AppBarLayout = 2131296586;
+			
+			// aapt resource value: 0x7f09014b
+			public const int Widget_Design_BottomSheet_Modal = 2131296587;
+			
+			// aapt resource value: 0x7f09014c
+			public const int Widget_Design_CollapsingToolbar = 2131296588;
+			
+			// aapt resource value: 0x7f09014d
+			public const int Widget_Design_CoordinatorLayout = 2131296589;
+			
+			// aapt resource value: 0x7f09014e
+			public const int Widget_Design_FloatingActionButton = 2131296590;
+			
+			// aapt resource value: 0x7f09014f
+			public const int Widget_Design_NavigationView = 2131296591;
+			
+			// aapt resource value: 0x7f090150
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131296592;
+			
+			// aapt resource value: 0x7f090151
+			public const int Widget_Design_Snackbar = 2131296593;
+			
+			// aapt resource value: 0x7f09013a
+			public const int Widget_Design_TabLayout = 2131296570;
+			
+			// aapt resource value: 0x7f090152
+			public const int Widget_Design_TextInputLayout = 2131296594;
+			
 			static Style()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -3161,6 +3762,30 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 4
 			public const int AlertDialog_singleChoiceItemLayout = 4;
+			
+			public static int[] AppBarLayout = new int[] {
+					16842964,
+					2130771998,
+					2130772181};
+			
+			// aapt resource value: 0
+			public const int AppBarLayout_android_background = 0;
+			
+			// aapt resource value: 1
+			public const int AppBarLayout_elevation = 1;
+			
+			// aapt resource value: 2
+			public const int AppBarLayout_expanded = 2;
+			
+			public static int[] AppBarLayout_LayoutParams = new int[] {
+					2130772182,
+					2130772183};
+			
+			// aapt resource value: 0
+			public const int AppBarLayout_LayoutParams_layout_scrollFlags = 0;
+			
+			// aapt resource value: 1
+			public const int AppBarLayout_LayoutParams_layout_scrollInterpolator = 1;
 			
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
@@ -3632,11 +4257,89 @@ namespace CheckItAndroidApp
 			// aapt resource value: 3
 			public const int AppCompatTheme_windowNoTitle = 3;
 			
+			public static int[] BottomSheetBehavior_Params = new int[] {
+					2130772184,
+					2130772185};
+			
+			// aapt resource value: 1
+			public const int BottomSheetBehavior_Params_behavior_hideable = 1;
+			
+			// aapt resource value: 0
+			public const int BottomSheetBehavior_Params_behavior_peekHeight = 0;
+			
 			public static int[] ButtonBarLayout = new int[] {
 					2130772120};
 			
 			// aapt resource value: 0
 			public const int ButtonBarLayout_allowStacking = 0;
+			
+			public static int[] CollapsingAppBarLayout_LayoutParams = new int[] {
+					2130772186,
+					2130772187};
+			
+			// aapt resource value: 0
+			public const int CollapsingAppBarLayout_LayoutParams_layout_collapseMode = 0;
+			
+			// aapt resource value: 1
+			public const int CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = 1;
+			
+			public static int[] CollapsingToolbarLayout = new int[] {
+					2130771975,
+					2130772188,
+					2130772189,
+					2130772190,
+					2130772191,
+					2130772192,
+					2130772193,
+					2130772194,
+					2130772195,
+					2130772196,
+					2130772197,
+					2130772198,
+					2130772199,
+					2130772200};
+			
+			// aapt resource value: 11
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 11;
+			
+			// aapt resource value: 7
+			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 7;
+			
+			// aapt resource value: 8
+			public const int CollapsingToolbarLayout_contentScrim = 8;
+			
+			// aapt resource value: 12
+			public const int CollapsingToolbarLayout_expandedTitleGravity = 12;
+			
+			// aapt resource value: 1
+			public const int CollapsingToolbarLayout_expandedTitleMargin = 1;
+			
+			// aapt resource value: 5
+			public const int CollapsingToolbarLayout_expandedTitleMarginBottom = 5;
+			
+			// aapt resource value: 4
+			public const int CollapsingToolbarLayout_expandedTitleMarginEnd = 4;
+			
+			// aapt resource value: 2
+			public const int CollapsingToolbarLayout_expandedTitleMarginStart = 2;
+			
+			// aapt resource value: 3
+			public const int CollapsingToolbarLayout_expandedTitleMarginTop = 3;
+			
+			// aapt resource value: 6
+			public const int CollapsingToolbarLayout_expandedTitleTextAppearance = 6;
+			
+			// aapt resource value: 9
+			public const int CollapsingToolbarLayout_statusBarScrim = 9;
+			
+			// aapt resource value: 0
+			public const int CollapsingToolbarLayout_title = 0;
+			
+			// aapt resource value: 13
+			public const int CollapsingToolbarLayout_titleEnabled = 13;
+			
+			// aapt resource value: 10
+			public const int CollapsingToolbarLayout_toolbarId = 10;
 			
 			public static int[] CompoundButton = new int[] {
 					16843015,
@@ -3651,6 +4354,52 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 2
 			public const int CompoundButton_buttonTintMode = 2;
+			
+			public static int[] CoordinatorLayout = new int[] {
+					2130772201,
+					2130772202};
+			
+			// aapt resource value: 0
+			public const int CoordinatorLayout_keylines = 0;
+			
+			// aapt resource value: 1
+			public const int CoordinatorLayout_statusBarBackground = 1;
+			
+			public static int[] CoordinatorLayout_LayoutParams = new int[] {
+					16842931,
+					2130772203,
+					2130772204,
+					2130772205,
+					2130772206};
+			
+			// aapt resource value: 0
+			public const int CoordinatorLayout_LayoutParams_android_layout_gravity = 0;
+			
+			// aapt resource value: 2
+			public const int CoordinatorLayout_LayoutParams_layout_anchor = 2;
+			
+			// aapt resource value: 4
+			public const int CoordinatorLayout_LayoutParams_layout_anchorGravity = 4;
+			
+			// aapt resource value: 1
+			public const int CoordinatorLayout_LayoutParams_layout_behavior = 1;
+			
+			// aapt resource value: 3
+			public const int CoordinatorLayout_LayoutParams_layout_keyline = 3;
+			
+			public static int[] DesignTheme = new int[] {
+					2130772207,
+					2130772208,
+					2130772209};
+			
+			// aapt resource value: 0
+			public const int DesignTheme_bottomSheetDialogTheme = 0;
+			
+			// aapt resource value: 1
+			public const int DesignTheme_bottomSheetStyle = 1;
+			
+			// aapt resource value: 2
+			public const int DesignTheme_textColorError = 2;
 			
 			public static int[] DrawerArrowToggle = new int[] {
 					2130772123,
@@ -3685,6 +4434,54 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 7
 			public const int DrawerArrowToggle_thickness = 7;
+			
+			public static int[] FloatingActionButton = new int[] {
+					2130771998,
+					2130772179,
+					2130772180,
+					2130772210,
+					2130772211,
+					2130772212,
+					2130772213,
+					2130772214};
+			
+			// aapt resource value: 1
+			public const int FloatingActionButton_backgroundTint = 1;
+			
+			// aapt resource value: 2
+			public const int FloatingActionButton_backgroundTintMode = 2;
+			
+			// aapt resource value: 6
+			public const int FloatingActionButton_borderWidth = 6;
+			
+			// aapt resource value: 0
+			public const int FloatingActionButton_elevation = 0;
+			
+			// aapt resource value: 4
+			public const int FloatingActionButton_fabSize = 4;
+			
+			// aapt resource value: 5
+			public const int FloatingActionButton_pressedTranslationZ = 5;
+			
+			// aapt resource value: 3
+			public const int FloatingActionButton_rippleColor = 3;
+			
+			// aapt resource value: 7
+			public const int FloatingActionButton_useCompatPadding = 7;
+			
+			public static int[] ForegroundLinearLayout = new int[] {
+					16843017,
+					16843264,
+					2130772215};
+			
+			// aapt resource value: 0
+			public const int ForegroundLinearLayout_android_foreground = 0;
+			
+			// aapt resource value: 1
+			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
+			
+			// aapt resource value: 2
+			public const int ForegroundLinearLayout_foregroundInsidePadding = 2;
 			
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
@@ -3882,6 +4679,48 @@ namespace CheckItAndroidApp
 			// aapt resource value: 7
 			public const int MenuView_preserveIconSpacing = 7;
 			
+			public static int[] NavigationView = new int[] {
+					16842964,
+					16842973,
+					16843039,
+					2130771998,
+					2130772216,
+					2130772217,
+					2130772218,
+					2130772219,
+					2130772220,
+					2130772221};
+			
+			// aapt resource value: 0
+			public const int NavigationView_android_background = 0;
+			
+			// aapt resource value: 1
+			public const int NavigationView_android_fitsSystemWindows = 1;
+			
+			// aapt resource value: 2
+			public const int NavigationView_android_maxWidth = 2;
+			
+			// aapt resource value: 3
+			public const int NavigationView_elevation = 3;
+			
+			// aapt resource value: 9
+			public const int NavigationView_headerLayout = 9;
+			
+			// aapt resource value: 7
+			public const int NavigationView_itemBackground = 7;
+			
+			// aapt resource value: 5
+			public const int NavigationView_itemIconTint = 5;
+			
+			// aapt resource value: 8
+			public const int NavigationView_itemTextAppearance = 8;
+			
+			// aapt resource value: 6
+			public const int NavigationView_itemTextColor = 6;
+			
+			// aapt resource value: 4
+			public const int NavigationView_menu = 4;
+			
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					2130772139};
@@ -3919,6 +4758,18 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 4
 			public const int RecyclerView_stackFromEnd = 4;
+			
+			public static int[] ScrimInsetsFrameLayout = new int[] {
+					2130772222};
+			
+			// aapt resource value: 0
+			public const int ScrimInsetsFrameLayout_insetForeground = 0;
+			
+			public static int[] ScrollingViewBehavior_Params = new int[] {
+					2130772223};
+			
+			// aapt resource value: 0
+			public const int ScrollingViewBehavior_Params_behavior_overlapTop = 0;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -3990,6 +4841,20 @@ namespace CheckItAndroidApp
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
 			
+			public static int[] SnackbarLayout = new int[] {
+					16843039,
+					2130771998,
+					2130772224};
+			
+			// aapt resource value: 0
+			public const int SnackbarLayout_android_maxWidth = 0;
+			
+			// aapt resource value: 1
+			public const int SnackbarLayout_elevation = 1;
+			
+			// aapt resource value: 2
+			public const int SnackbarLayout_maxActionInlineWidth = 2;
+			
 			public static int[] Spinner = new int[] {
 					16842930,
 					16843126,
@@ -4054,6 +4919,86 @@ namespace CheckItAndroidApp
 			// aapt resource value: 3
 			public const int SwitchCompat_track = 3;
 			
+			public static int[] TabItem = new int[] {
+					16842754,
+					16842994,
+					16843087};
+			
+			// aapt resource value: 0
+			public const int TabItem_android_icon = 0;
+			
+			// aapt resource value: 1
+			public const int TabItem_android_layout = 1;
+			
+			// aapt resource value: 2
+			public const int TabItem_android_text = 2;
+			
+			public static int[] TabLayout = new int[] {
+					2130772225,
+					2130772226,
+					2130772227,
+					2130772228,
+					2130772229,
+					2130772230,
+					2130772231,
+					2130772232,
+					2130772233,
+					2130772234,
+					2130772235,
+					2130772236,
+					2130772237,
+					2130772238,
+					2130772239,
+					2130772240};
+			
+			// aapt resource value: 3
+			public const int TabLayout_tabBackground = 3;
+			
+			// aapt resource value: 2
+			public const int TabLayout_tabContentStart = 2;
+			
+			// aapt resource value: 5
+			public const int TabLayout_tabGravity = 5;
+			
+			// aapt resource value: 0
+			public const int TabLayout_tabIndicatorColor = 0;
+			
+			// aapt resource value: 1
+			public const int TabLayout_tabIndicatorHeight = 1;
+			
+			// aapt resource value: 7
+			public const int TabLayout_tabMaxWidth = 7;
+			
+			// aapt resource value: 6
+			public const int TabLayout_tabMinWidth = 6;
+			
+			// aapt resource value: 4
+			public const int TabLayout_tabMode = 4;
+			
+			// aapt resource value: 15
+			public const int TabLayout_tabPadding = 15;
+			
+			// aapt resource value: 14
+			public const int TabLayout_tabPaddingBottom = 14;
+			
+			// aapt resource value: 13
+			public const int TabLayout_tabPaddingEnd = 13;
+			
+			// aapt resource value: 11
+			public const int TabLayout_tabPaddingStart = 11;
+			
+			// aapt resource value: 12
+			public const int TabLayout_tabPaddingTop = 12;
+			
+			// aapt resource value: 10
+			public const int TabLayout_tabSelectedTextColor = 10;
+			
+			// aapt resource value: 8
+			public const int TabLayout_tabTextAppearance = 8;
+			
+			// aapt resource value: 9
+			public const int TabLayout_tabTextColor = 9;
+			
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -4091,6 +5036,52 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 8
 			public const int TextAppearance_textAllCaps = 8;
+			
+			public static int[] TextInputLayout = new int[] {
+					16842906,
+					16843088,
+					2130772241,
+					2130772242,
+					2130772243,
+					2130772244,
+					2130772245,
+					2130772246,
+					2130772247,
+					2130772248,
+					2130772249};
+			
+			// aapt resource value: 1
+			public const int TextInputLayout_android_hint = 1;
+			
+			// aapt resource value: 0
+			public const int TextInputLayout_android_textColorHint = 0;
+			
+			// aapt resource value: 6
+			public const int TextInputLayout_counterEnabled = 6;
+			
+			// aapt resource value: 7
+			public const int TextInputLayout_counterMaxLength = 7;
+			
+			// aapt resource value: 9
+			public const int TextInputLayout_counterOverflowTextAppearance = 9;
+			
+			// aapt resource value: 8
+			public const int TextInputLayout_counterTextAppearance = 8;
+			
+			// aapt resource value: 4
+			public const int TextInputLayout_errorEnabled = 4;
+			
+			// aapt resource value: 5
+			public const int TextInputLayout_errorTextAppearance = 5;
+			
+			// aapt resource value: 10
+			public const int TextInputLayout_hintAnimationEnabled = 10;
+			
+			// aapt resource value: 3
+			public const int TextInputLayout_hintEnabled = 3;
+			
+			// aapt resource value: 2
+			public const int TextInputLayout_hintTextAppearance = 2;
 			
 			public static int[] Toolbar = new int[] {
 					16842927,
