@@ -18,15 +18,22 @@ namespace CheckItAndroidApp.Core.Business.Adapters
             this.challanges = challanges;
         }
 
-        public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+        public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
         {
-            var movieViewHolder = (ChallengeViewHolder)holder;
-            movieViewHolder.ChallengeNameTextView.Text = challanges[position].Name;
+            var holder = (ChallengeViewHolder)viewHolder;
+
+            holder.ChallengeName.Text = challanges[position].Name;
+            holder.ChallengeDuration.Text = string.Format("{0} days to go", challanges[position].Duration);
+
+            if(challanges[position].Id == 1 || challanges[position].Id == 3)
+            {
+                holder.ChallengeStatus.SetImageResource(Resource.Drawable.CircleFull);
+            }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            var layout = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ChallengeRow, parent, false);
+            var layout = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.RowChallenge, parent, false);
 
             return new ChallengeViewHolder(layout, OnItemClick);
         }
@@ -38,21 +45,23 @@ namespace CheckItAndroidApp.Core.Business.Adapters
 
         void OnItemClick(int position)
         {
-            if (ItemClick != null)
-                ItemClick(this, position);
+            ItemClick?.Invoke(this, position);
         }
     }
 
-        public class ChallengeViewHolder : RecyclerView.ViewHolder
+    public class ChallengeViewHolder : RecyclerView.ViewHolder
+    {
+        public TextView ChallengeName { get; set; }
+        public TextView ChallengeDuration { get; set; }
+        public ImageView ChallengeStatus { get; set; }
+
+        public ChallengeViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
-            public TextView ChallengeNameTextView { get; set; }
+            ChallengeName = itemView.FindViewById<TextView>(Resource.Id.challengeName);
+            ChallengeDuration = itemView.FindViewById<TextView>(Resource.Id.challengeDuration);
+            ChallengeStatus = itemView.FindViewById<ImageView>(Resource.Id.challengeStatus);
 
-            public ChallengeViewHolder(View itemView, Action<int> listener) : base(itemView)
-            {
-                ChallengeNameTextView = itemView.FindViewById<TextView>(Resource.Id.challengeName);
-
-                itemView.Click += (s, e) => listener(Position);
-            }
+            itemView.Click += (s, e) => listener(LayoutPosition);
         }
-    
+    }
 }

@@ -6,54 +6,26 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Support.V7.Widget;
 using CheckItAndroidApp.Core.Business.Adapters;
-using Android.Support.Design.Widget;
 using System.Collections.Generic;
+using CheckItAndroidApp.Core.Business.Dtos;
 
 namespace CheckItAndroidApp.Client.Views
 {
     [Activity(Label = "CheckIt", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class ChallangeActivity : Activity
     {
-        private RecyclerView mRecyclerView;
-        private PreferenceHelper pref;
-        private DataManger dm;
-
-
-        List<Core.Business.Dtos.ChallangeDto> challenges = new List<Core.Business.Dtos.ChallangeDto>
-            {
-                new Core.Business.Dtos.ChallangeDto
-                {
-                    Duration = 10,
-                    Name = "Name 1",
-                    Id = 1
-                },
-                new Core.Business.Dtos.ChallangeDto
-                {
-                    Duration = 10,
-                    Name = "Name 2",
-                    Id = 2
-                },
-                new Core.Business.Dtos.ChallangeDto
-                {
-                    Duration = 10,
-                    Name = "Name 3",
-                    Id = 3
-                },
-                new Core.Business.Dtos.ChallangeDto
-                {
-                    Duration = 10,
-                    Name = "Name 4",
-                    Id = 4
-                },
-    };
+        private PreferenceHelper prefHelper;
+        private DataManger dataManager;
+        private List<ChallangeDto> challenges;
+           
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.ViewChallenge);
 
-            pref = new PreferenceHelper(this);
-            dm = new DataManger(this);
+            prefHelper = new PreferenceHelper(this);
+            dataManager = new DataManger(this);
 
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
             var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
@@ -66,6 +38,9 @@ namespace CheckItAndroidApp.Client.Views
             var layoutManager = new LinearLayoutManager(this, LinearLayoutManager.Vertical, false);
             recyclerView.SetLayoutManager(layoutManager);
 
+            //Get challenges from database
+            challenges = dataManager.ChallangeData.GetChallanges();
+
             var adapter = new ChallengeAdapter(challenges);
 
             recyclerView.SetAdapter(adapter);
@@ -75,26 +50,13 @@ namespace CheckItAndroidApp.Client.Views
             // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
 
             //  var userName = pref.GetString(PreferenceKeys.UserName);
-
-            //Get Challanges from database
-            //var challangeList = dm.ChallangeData.GetChallanges();
-
-
-            //var toolbarBottom = FindViewById<Toolbar>(Resource.Id.toolbar_bottom);
-
-            /*   toolbarBottom.Title = "Photo Editing";
-               toolbarBottom.InflateMenu(Resource.Menu.photo_edit);
-               toolbarBottom.MenuItemClick += (sender, e) => {
-                   Toast.MakeText(this, "Bottom toolbar pressed: " + e.Item.TitleFormatted, ToastLength.Short).Show();
-               };*/
-
         }
 
-        private void MoviesAdapter_ItemClick(object sender, int e)
+        private void MoviesAdapter_ItemClick(object sender, int i)
         {
             var linearLayout = this.FindViewById<LinearLayout>(Resource.Id.main_content);
 
-            Toast.MakeText(this, "Top ActionBar pressed: " + challenges[e].Name.ToString(), ToastLength.Short).Show();
+            Toast.MakeText(this, "Top ActionBar pressed: " + challenges[i].Name.ToString(), ToastLength.Short).Show();
         }
 
         /// <Docs>The options menu in which you place your items.</Docs>
@@ -121,3 +83,4 @@ namespace CheckItAndroidApp.Client.Views
 //TODO  Tools -> Options -> Projects and Solutions -> General -> "Track Active Item in Solution Explorer" 
 //TODO navigate to shorcut
 //TODO get mad cash
+//todo duplicate extension https://visualstudiogallery.msdn.microsoft.com/830a6482-3b8f-41a8-97b5-b9c581e5ad8b

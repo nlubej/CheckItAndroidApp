@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="25dp"
+    android:paddingTop="10dp">
+    <ImageView
+        android:src="@drawable/CircleEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/circleImg" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/circleImg">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Go to bed early"
+            android:id="@+id/challengeName"
+            android:gravity="center_vertical"
+            android:textColor="#2c2d30" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="40 Days"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/challengeName"
+            android:layout_alignLeft="@+id/challengeName"
+            android:id="@+id/textView1" />
+    </LinearLayout>
+</LinearLayout>

@@ -30,7 +30,15 @@ namespace CheckItAndroidApp.Core.Data
             {
                 //Create tables
                 string challengeTable = "create table if not exists CHALLENGE (CHALLENGE_ID integer primary key autoincrement, NAME varchar not null, DURATION integer not null, CREATED_ON TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
+                string insert = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Go to bed early', 20);";
+                string insert2 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Drink more water', 40);";
+                string insert3 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Call up a bro', 15);";
+
+
                 db.ExecSQL(challengeTable);
+                db.ExecSQL(insert);
+                db.ExecSQL(insert2);
+                db.ExecSQL(insert3);
             }
 
             public override void OnUpgrade(Android.Database.Sqlite.SQLiteDatabase db, int oldVersion, int newVersion)
