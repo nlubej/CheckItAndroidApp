@@ -26,22 +26,26 @@ namespace CheckItAndroidApp.Core.Data
             {
             }
 
-            public override void OnCreate(Android.Database.Sqlite.SQLiteDatabase db)
+            public override void OnCreate(SQLiteDatabase db)
             {
                 //Create tables
                 string challengeTable = "create table if not exists CHALLENGE (CHALLENGE_ID integer primary key autoincrement, NAME varchar not null, DURATION integer not null, CREATED_ON TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
+                string challengeEntryTable = "create table if not exists CHALLENGE_ENTRY (CHALLENGE_ENTRY_ID integer primary key autoincrement, CHALLENGE_ID integer not null, ENTRY_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (CHALLENGE_ID) REFERENCES CHALLENGE (CHALLENGE_ID));";
+
+
                 string insert = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Go to bed early', 20);";
                 string insert2 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Drink more water', 40);";
                 string insert3 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Call up a bro', 15);";
 
 
                 db.ExecSQL(challengeTable);
+                db.ExecSQL(challengeEntryTable);
                 db.ExecSQL(insert);
                 db.ExecSQL(insert2);
                 db.ExecSQL(insert3);
             }
 
-            public override void OnUpgrade(Android.Database.Sqlite.SQLiteDatabase db, int oldVersion, int newVersion)
+            public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
             {
                 if (oldVersion == 1 && newVersion == 2)
                 {

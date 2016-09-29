@@ -1795,22 +1795,25 @@ namespace CheckItAndroidApp
 			public const int abc_textfield_search_material = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int CircleEmpty = 2130837578;
+			public const int CircleBig = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int CircleFull = 2130837579;
+			public const int CircleEmpty = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int design_fab_background = 2130837580;
+			public const int CircleFull = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int design_snackbar_background = 2130837581;
+			public const int design_fab_background = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int Icon = 2130837582;
+			public const int design_snackbar_background = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int notification_template_icon_bg = 2130837583;
+			public const int Icon = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int notification_template_icon_bg = 2130837584;
 			
 			static Drawable()
 			{
@@ -1908,6 +1911,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f06007f
 			public const int challengeStatus = 2131099775;
+			
+			// aapt resource value: 0x7f060086
+			public const int checkButton = 2131099782;
 			
 			// aapt resource value: 0x7f060052
 			public const int checkbox = 2131099730;
@@ -2035,17 +2041,17 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060086
-			public const int main_content = 2131099782;
+			// aapt resource value: 0x7f060087
+			public const int main_content = 2131099783;
 			
 			// aapt resource value: 0x7f060075
 			public const int media_actions = 2131099765;
 			
-			// aapt resource value: 0x7f060089
-			public const int menu_settings = 2131099785;
+			// aapt resource value: 0x7f06008a
+			public const int menu_settings = 2131099786;
 			
-			// aapt resource value: 0x7f060088
-			public const int menu_share = 2131099784;
+			// aapt resource value: 0x7f060089
+			public const int menu_share = 2131099785;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -2086,8 +2092,8 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f060087
-			public const int recyclerView = 2131099783;
+			// aapt resource value: 0x7f060088
+			public const int recyclerView = 2131099784;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;
@@ -2444,6 +2450,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f030034
 			public const int ViewChallenge = 2130903092;
+			
+			// aapt resource value: 0x7f030035
+			public const int ViewChallengeList = 2130903093;
 			
 			static Layout()
 			{

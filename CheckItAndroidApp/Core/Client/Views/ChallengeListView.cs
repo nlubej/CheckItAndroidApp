@@ -8,11 +8,12 @@ using Android.Support.V7.Widget;
 using CheckItAndroidApp.Core.Business.Adapters;
 using System.Collections.Generic;
 using CheckItAndroidApp.Core.Business.Dtos;
+using Android.Content;
 
 namespace CheckItAndroidApp.Client.Views
 {
     [Activity(Label = "CheckIt", MainLauncher = true, Icon = "@drawable/icon")]
-    public class ChallangeActivity : Activity
+    public class ChallengeListView : Activity
     {
         private PreferenceHelper prefHelper;
         private DataManger dataManager;
@@ -22,7 +23,7 @@ namespace CheckItAndroidApp.Client.Views
         {
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.ViewChallenge);
+            SetContentView(Resource.Layout.ViewChallengeList);
 
             prefHelper = new PreferenceHelper(this);
             dataManager = new DataManger(this);
@@ -54,9 +55,9 @@ namespace CheckItAndroidApp.Client.Views
 
         private void MoviesAdapter_ItemClick(object sender, int i)
         {
-            var linearLayout = this.FindViewById<LinearLayout>(Resource.Id.main_content);
+            Intent intent = new Intent(this, typeof(ChallengeView));
 
-            Toast.MakeText(this, "Top ActionBar pressed: " + challenges[i].Name.ToString(), ToastLength.Short).Show();
+            StartActivity(intent);
         }
 
         /// <Docs>The options menu in which you place your items.</Docs>
