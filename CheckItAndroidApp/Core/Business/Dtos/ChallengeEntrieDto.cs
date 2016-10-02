@@ -12,12 +12,9 @@ using Android.Widget;
 
 namespace CheckItAndroidApp.Core.Business.Dtos
 {
-    public class ChallangeDto
+    public class ChallengeEntryDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int Duration { get; set; }
-        public int EntriesCompleted { get; set; }
-        public DateTime? LastEntryDate { get; set; }
+        public DateTime EntryDate { get; set; }
     }
 }

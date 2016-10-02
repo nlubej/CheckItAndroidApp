@@ -26,6 +26,29 @@ namespace CheckItAndroidApp
 		
 		public static void UpdateIdValues()
 		{
+			global::com.refractored.fab.Resource.Attribute.fab_colorDisabled = global::CheckItAndroidApp.Resource.Attribute.fab_colorDisabled;
+			global::com.refractored.fab.Resource.Attribute.fab_colorNormal = global::CheckItAndroidApp.Resource.Attribute.fab_colorNormal;
+			global::com.refractored.fab.Resource.Attribute.fab_colorPressed = global::CheckItAndroidApp.Resource.Attribute.fab_colorPressed;
+			global::com.refractored.fab.Resource.Attribute.fab_colorRipple = global::CheckItAndroidApp.Resource.Attribute.fab_colorRipple;
+			global::com.refractored.fab.Resource.Attribute.fab_shadow = global::CheckItAndroidApp.Resource.Attribute.fab_shadow;
+			global::com.refractored.fab.Resource.Attribute.fab_size = global::CheckItAndroidApp.Resource.Attribute.fab_size;
+			global::com.refractored.fab.Resource.Color.fab_material_blue_500 = global::CheckItAndroidApp.Resource.Color.fab_material_blue_500;
+			global::com.refractored.fab.Resource.Dimension.fab_elevation_lollipop = global::CheckItAndroidApp.Resource.Dimension.fab_elevation_lollipop;
+			global::com.refractored.fab.Resource.Dimension.fab_scroll_threshold = global::CheckItAndroidApp.Resource.Dimension.fab_scroll_threshold;
+			global::com.refractored.fab.Resource.Dimension.fab_shadow_size = global::CheckItAndroidApp.Resource.Dimension.fab_shadow_size;
+			global::com.refractored.fab.Resource.Dimension.fab_size_mini = global::CheckItAndroidApp.Resource.Dimension.fab_size_mini;
+			global::com.refractored.fab.Resource.Dimension.fab_size_normal = global::CheckItAndroidApp.Resource.Dimension.fab_size_normal;
+			global::com.refractored.fab.Resource.Drawable.fab_shadow = global::CheckItAndroidApp.Resource.Drawable.fab_shadow;
+			global::com.refractored.fab.Resource.Drawable.fab_shadow_mini = global::CheckItAndroidApp.Resource.Drawable.fab_shadow_mini;
+			global::com.refractored.fab.Resource.Id.mini = global::CheckItAndroidApp.Resource.Id.mini;
+			global::com.refractored.fab.Resource.Id.normal = global::CheckItAndroidApp.Resource.Id.normal;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_colorDisabled = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_colorDisabled;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_colorNormal = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_colorNormal;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_colorPressed = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_colorPressed;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_colorRipple = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_colorRipple;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_shadow = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_shadow;
+			global::com.refractored.fab.Resource.Styleable.FloatingActionButton_fab_size = global::CheckItAndroidApp.Resource.Styleable.FloatingActionButton_fab_size;
 		}
 		
 		public partial class Animation
@@ -457,6 +480,24 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f0100f3
 			public const int fabSize = 2130772211;
+			
+			// aapt resource value: 0x7f01011c
+			public const int fab_colorDisabled = 2130772252;
+			
+			// aapt resource value: 0x7f01011b
+			public const int fab_colorNormal = 2130772251;
+			
+			// aapt resource value: 0x7f01011a
+			public const int fab_colorPressed = 2130772250;
+			
+			// aapt resource value: 0x7f01011d
+			public const int fab_colorRipple = 2130772253;
+			
+			// aapt resource value: 0x7f01011e
+			public const int fab_shadow = 2130772254;
+			
+			// aapt resource value: 0x7f01011f
+			public const int fab_size = 2130772255;
 			
 			// aapt resource value: 0x7f0100f7
 			public const int foregroundInsidePadding = 2130772215;
@@ -988,29 +1029,29 @@ namespace CheckItAndroidApp
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b0044
-			public const int abc_background_cache_hint_selector_material_dark = 2131427396;
+			// aapt resource value: 0x7f0b004a
+			public const int abc_background_cache_hint_selector_material_dark = 2131427402;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int abc_background_cache_hint_selector_material_light = 2131427397;
+			// aapt resource value: 0x7f0b004b
+			public const int abc_background_cache_hint_selector_material_light = 2131427403;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b0046
-			public const int abc_primary_text_disable_only_material_dark = 2131427398;
+			// aapt resource value: 0x7f0b004c
+			public const int abc_primary_text_disable_only_material_dark = 2131427404;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int abc_primary_text_disable_only_material_light = 2131427399;
+			// aapt resource value: 0x7f0b004d
+			public const int abc_primary_text_disable_only_material_light = 2131427405;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int abc_primary_text_material_dark = 2131427400;
+			// aapt resource value: 0x7f0b004e
+			public const int abc_primary_text_material_dark = 2131427406;
 			
-			// aapt resource value: 0x7f0b0049
-			public const int abc_primary_text_material_light = 2131427401;
+			// aapt resource value: 0x7f0b004f
+			public const int abc_primary_text_material_light = 2131427407;
 			
-			// aapt resource value: 0x7f0b004a
-			public const int abc_search_url_text = 2131427402;
+			// aapt resource value: 0x7f0b0050
+			public const int abc_search_url_text = 2131427408;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -1021,11 +1062,11 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b004b
-			public const int abc_secondary_text_material_dark = 2131427403;
+			// aapt resource value: 0x7f0b0051
+			public const int abc_secondary_text_material_dark = 2131427409;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int abc_secondary_text_material_light = 2131427404;
+			// aapt resource value: 0x7f0b0052
+			public const int abc_secondary_text_material_light = 2131427410;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -1069,6 +1110,15 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0011
 			public const int button_material_light = 2131427345;
 			
+			// aapt resource value: 0x7f0b0048
+			public const int colorAccent = 2131427400;
+			
+			// aapt resource value: 0x7f0b0047
+			public const int colorPrimary = 2131427399;
+			
+			// aapt resource value: 0x7f0b0049
+			public const int colorPrimaryDark = 2131427401;
+			
 			// aapt resource value: 0x7f0b003a
 			public const int design_fab_shadow_end_color = 2131427386;
 			
@@ -1110,6 +1160,9 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 0x7f0b0015
 			public const int dim_foreground_material_light = 2131427349;
+			
+			// aapt resource value: 0x7f0b0044
+			public const int fab_material_blue_500 = 2131427396;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int foreground_material_dark = 2131427350;
@@ -1165,6 +1218,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0027
 			public const int material_grey_900 = 2131427367;
 			
+			// aapt resource value: 0x7f0b0046
+			public const int menu_text_color = 2131427398;
+			
 			// aapt resource value: 0x7f0b0028
 			public const int primary_dark_material_dark = 2131427368;
 			
@@ -1213,17 +1269,20 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int switch_thumb_material_dark = 2131427405;
+			// aapt resource value: 0x7f0b0053
+			public const int switch_thumb_material_dark = 2131427411;
 			
-			// aapt resource value: 0x7f0b004e
-			public const int switch_thumb_material_light = 2131427406;
+			// aapt resource value: 0x7f0b0054
+			public const int switch_thumb_material_light = 2131427412;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int switch_thumb_normal_material_light = 2131427385;
+			
+			// aapt resource value: 0x7f0b0045
+			public const int transparent = 2131427397;
 			
 			static Color()
 			{
@@ -1532,6 +1591,21 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f050047
 			public const int disabled_alpha_material_light = 2131034183;
 			
+			// aapt resource value: 0x7f05006f
+			public const int fab_elevation_lollipop = 2131034223;
+			
+			// aapt resource value: 0x7f05006e
+			public const int fab_scroll_threshold = 2131034222;
+			
+			// aapt resource value: 0x7f05006d
+			public const int fab_shadow_size = 2131034221;
+			
+			// aapt resource value: 0x7f05006c
+			public const int fab_size_mini = 2131034220;
+			
+			// aapt resource value: 0x7f05006b
+			public const int fab_size_normal = 2131034219;
+			
 			// aapt resource value: 0x7f050048
 			public const int highlight_alpha_material_colored = 2131034184;
 			
@@ -1810,10 +1884,19 @@ namespace CheckItAndroidApp
 			public const int design_snackbar_background = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int Icon = 2130837583;
+			public const int fab_shadow = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int notification_template_icon_bg = 2130837584;
+			public const int fab_shadow_mini = 2130837584;
+			
+			// aapt resource value: 0x7f020051
+			public const int ic_add_white_24dp = 2130837585;
+			
+			// aapt resource value: 0x7f020052
+			public const int Icon = 2130837586;
+			
+			// aapt resource value: 0x7f020053
+			public const int notification_template_icon_bg = 2130837587;
 			
 			static Drawable()
 			{
@@ -1906,6 +1989,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060082
 			public const int challengeDuration = 2131099778;
 			
+			// aapt resource value: 0x7f060087
+			public const int challengeListLayout = 2131099783;
+			
 			// aapt resource value: 0x7f060081
 			public const int challengeName = 2131099777;
 			
@@ -1990,6 +2076,9 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060051
 			public const int expanded_menu = 2131099729;
 			
+			// aapt resource value: 0x7f06008a
+			public const int fab = 2131099786;
+			
 			// aapt resource value: 0x7f060035
 			public const int fill = 2131099701;
 			
@@ -2041,17 +2130,17 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060087
-			public const int main_content = 2131099783;
+			// aapt resource value: 0x7f060088
+			public const int main_content = 2131099784;
 			
 			// aapt resource value: 0x7f060075
 			public const int media_actions = 2131099765;
 			
-			// aapt resource value: 0x7f06008a
-			public const int menu_settings = 2131099786;
+			// aapt resource value: 0x7f06008c
+			public const int menuSettings = 2131099788;
 			
-			// aapt resource value: 0x7f060089
-			public const int menu_share = 2131099785;
+			// aapt resource value: 0x7f06008b
+			public const int menu_share = 2131099787;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -2092,8 +2181,8 @@ namespace CheckItAndroidApp
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f060088
-			public const int recyclerView = 2131099784;
+			// aapt resource value: 0x7f060089
+			public const int recyclerView = 2131099785;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;
@@ -2468,10 +2557,13 @@ namespace CheckItAndroidApp
 		{
 			
 			// aapt resource value: 0x7f0c0000
-			public const int home = 2131492864;
+			public const int ChallengeListMenu = 2131492864;
 			
 			// aapt resource value: 0x7f0c0001
-			public const int photo_edit = 2131492865;
+			public const int ChallengeMenu = 2131492865;
+			
+			// aapt resource value: 0x7f0c0002
+			public const int photo_edit = 2131492866;
 			
 			static Menu()
 			{
@@ -4476,7 +4568,13 @@ namespace CheckItAndroidApp
 					2130772211,
 					2130772212,
 					2130772213,
-					2130772214};
+					2130772214,
+					2130772250,
+					2130772251,
+					2130772252,
+					2130772253,
+					2130772254,
+					2130772255};
 			
 			// aapt resource value: 1
 			public const int FloatingActionButton_backgroundTint = 1;
@@ -4492,6 +4590,24 @@ namespace CheckItAndroidApp
 			
 			// aapt resource value: 4
 			public const int FloatingActionButton_fabSize = 4;
+			
+			// aapt resource value: 10
+			public const int FloatingActionButton_fab_colorDisabled = 10;
+			
+			// aapt resource value: 9
+			public const int FloatingActionButton_fab_colorNormal = 9;
+			
+			// aapt resource value: 8
+			public const int FloatingActionButton_fab_colorPressed = 8;
+			
+			// aapt resource value: 11
+			public const int FloatingActionButton_fab_colorRipple = 11;
+			
+			// aapt resource value: 12
+			public const int FloatingActionButton_fab_shadow = 12;
+			
+			// aapt resource value: 13
+			public const int FloatingActionButton_fab_size = 13;
 			
 			// aapt resource value: 5
 			public const int FloatingActionButton_pressedTranslationZ = 5;

@@ -9,6 +9,8 @@ using CheckItAndroidApp.Core.Business.Adapters;
 using System.Collections.Generic;
 using CheckItAndroidApp.Core.Business.Dtos;
 using Android.Content;
+using Android.Support.Design.Widget;
+using Android.Runtime;
 
 namespace CheckItAndroidApp.Client.Views
 {
@@ -18,7 +20,8 @@ namespace CheckItAndroidApp.Client.Views
         private PreferenceHelper prefHelper;
         private DataManger dataManager;
         private List<ChallangeDto> challenges;
-           
+        private ChallengeAdapter adapter;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -42,7 +45,7 @@ namespace CheckItAndroidApp.Client.Views
             //Get challenges from database
             challenges = dataManager.ChallangeData.GetChallanges();
 
-            var adapter = new ChallengeAdapter(challenges);
+            adapter = new ChallengeAdapter(challenges);
 
             recyclerView.SetAdapter(adapter);
 
@@ -56,8 +59,24 @@ namespace CheckItAndroidApp.Client.Views
         private void MoviesAdapter_ItemClick(object sender, int i)
         {
             Intent intent = new Intent(this, typeof(ChallengeView));
+            intent.PutExtra("NAME", challenges[i].Name);
 
-            StartActivity(intent);
+            Bundle bundle = new Bundle();
+            bundle.PutInt("CHALLENGE_ID", challenges[i].Id);
+            bundle.PutString("NAME", challenges[i].Name);
+
+            intent.PutExtras(bundle);
+            StartActivityForResult(intent,0);
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (resultCode == Result.Ok)
+            {
+                adapter.SubtractEntryCount(data.GetIntExtra("CHALLENGE_ID", -1));
+                adapter.NotifyDataSetChanged();
+            }
         }
 
         /// <Docs>The options menu in which you place your items.</Docs>
@@ -68,12 +87,30 @@ namespace CheckItAndroidApp.Client.Views
 		/// <param name="menu">Menu.</param>
 		public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.home, menu);
+            MenuInflater.Inflate(Resource.Menu.ChallengeListMenu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+
             Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuSettings:
+
+                    var linearLayout = FindViewById<FrameLayout>(Resource.Id.challengeListLayout);
+                    Snackbar.Make(linearLayout, "This is a simple snackbar.", Snackbar.LengthLong)
+                            .SetAction("OK", action => { })
+                            .Show();
+
+                    //do something
+                    return true;
+                case Resource.Id.home:
+                    Finish();
+                    break;
+            }
+
             return base.OnOptionsItemSelected(item);
         }
     }

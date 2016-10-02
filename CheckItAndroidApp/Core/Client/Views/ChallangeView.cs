@@ -18,54 +18,72 @@ namespace CheckItAndroidApp.Client.Views
     {
         private PreferenceHelper prefHelper;
         private DataManger dataManager;
-        private List<ChallangeDto> challenges;
         private ImageView checkButton;
+        private int challengeId;
+        private string challengeName;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            bundle = Intent.Extras;
 
             SetContentView(Resource.Layout.ViewChallenge);
 
             prefHelper = new PreferenceHelper(this);
             dataManager = new DataManger(this);
-
+     
             var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
             checkButton = FindViewById<ImageView>(Resource.Id.checkButton);
- 
+
+            challengeName = bundle.GetString("NAME");
+            challengeId = bundle.GetInt("CHALLENGE_ID");
 
             SetActionBar(toolbar);
+
             ActionBar.Title = "Check It";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
-
-            //Get challenges from database
-            challenges = dataManager.ChallangeData.GetChallanges();
-
+        
             checkButton.Click += CheckButton_Click;
-            // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
-            //  var userName = pref.GetString(PreferenceKeys.UserName);
         }
 
         private void CheckButton_Click(object sender, System.EventArgs e)
         {
             checkButton.SetColorFilter(Color.LightBlue);
+
+            //TODO preverit je potrebno, da se ta ekran ni odprt recimo 23:59:59 ker potem, bo po insertu namesto današnjega datuma, dalo jutrišnji datum.
+            var isInserted = dataManager.ChallangeData.InsertChallengeEntry(challengeId);
+
+            if (isInserted)
+            {
+                Intent myIntent = new Intent(this, typeof(ChallengeListView));
+                myIntent.PutExtra("CHALLENGE_ID", challengeId);
+                SetResult(Result.Ok, myIntent);
+            }
         }
 
-        /// <Docs>The options menu in which you place your items.</Docs>
-		/// <returns>To be added.</returns>
 		/// <summary>
 		/// This is the menu for the Toolbar/Action Bar to use
 		/// </summary>
-		/// <param name="menu">Menu.</param>
 		public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.home, menu);
+            MenuInflater.Inflate(Resource.Menu.ChallengeMenu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuSettings:
+                    //do something
+                    return true;
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+            }
+
             return base.OnOptionsItemSelected(item);
         }
     }

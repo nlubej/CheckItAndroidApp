@@ -4,6 +4,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
 using CheckItAndroidApp.Core.Business.Dtos;
+using System.Linq;
 
 namespace CheckItAndroidApp.Core.Business.Adapters
 {
@@ -18,16 +19,24 @@ namespace CheckItAndroidApp.Core.Business.Adapters
             this.challanges = challanges;
         }
 
-        public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
+        public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int pos)
         {
             var holder = (ChallengeViewHolder)viewHolder;
 
-            holder.ChallengeName.Text = challanges[position].Name;
-            holder.ChallengeDuration.Text = string.Format("{0} days to go", challanges[position].Duration);
+            holder.ChallengeName.Text = challanges[pos].Name;
+            holder.ChallengeDuration.Text = string.Format("{0} days to go", challanges[pos].Duration - challanges[pos].EntriesCompleted);
 
-            if(challanges[position].Id == 1 || challanges[position].Id == 3)
+            var lastDate = challanges[pos].LastEntryDate;
+
+            if (challanges[pos].EntriesCompleted == 0  || 
+                (challanges[pos].EntriesCompleted != challanges[pos].Duration  &&
+                 lastDate.HasValue && DateTime.Today > lastDate.Value.Date))
             {
                 holder.ChallengeStatus.SetImageResource(Resource.Drawable.CircleFull);
+            }
+            else
+            {
+                holder.ChallengeStatus.SetImageResource(Resource.Drawable.CircleEmpty);
             }
         }
 
@@ -46,6 +55,16 @@ namespace CheckItAndroidApp.Core.Business.Adapters
         void OnItemClick(int position)
         {
             ItemClick?.Invoke(this, position);
+        }
+
+        public void SubtractEntryCount(int challengeId)
+        {
+            var challenge = challanges.FirstOrDefault(w => w.Id == challengeId);
+
+            if (challenge == null)
+                return;
+
+            challenge.EntriesCompleted++;
         }
     }
 

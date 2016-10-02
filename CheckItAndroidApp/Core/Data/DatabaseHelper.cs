@@ -36,6 +36,9 @@ namespace CheckItAndroidApp.Core.Data
                 string insert = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Go to bed early', 20);";
                 string insert2 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Drink more water', 40);";
                 string insert3 = "INSERT INTO CHALLENGE (NAME, DURATION) VALUES ('Call up a bro', 15);";
+                string insert4 = "INSERT INTO CHALLENGE_ENTRY (CHALLENGE_ID) VALUES (1);";
+                string insert5 = "INSERT INTO CHALLENGE_ENTRY (CHALLENGE_ID) VALUES (1);";
+                string insert6 = "INSERT INTO CHALLENGE_ENTRY (CHALLENGE_ID) VALUES (2);";
 
 
                 db.ExecSQL(challengeTable);
@@ -43,6 +46,9 @@ namespace CheckItAndroidApp.Core.Data
                 db.ExecSQL(insert);
                 db.ExecSQL(insert2);
                 db.ExecSQL(insert3);
+                db.ExecSQL(insert4);
+                db.ExecSQL(insert5);
+                db.ExecSQL(insert6);
             }
 
             public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -81,5 +87,15 @@ namespace CheckItAndroidApp.Core.Data
         {
             return db.Query(tableName, columns, condition, null, null, null, null);
         }
+
+        public long Insert(string tableName, ContentValues contentValues)
+        {
+            return db.Insert(tableName, null, contentValues);
+        }
+        public ICursor ExecuteQuery(string query)
+        {
+            return db.RawQuery(query, null);
+        }
+
     }
 }

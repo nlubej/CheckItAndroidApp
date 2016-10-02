@@ -6,7 +6,7 @@
       android:showAsAction="ifRoom"
       android:title="Share" />
  <item
-      android:id="@+id/menu_settings"
+      android:id="@+id/menuSettings"
       android:showAsAction="never"
       android:title="Settings" />
 </menu>
