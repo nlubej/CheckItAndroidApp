@@ -9,8 +9,13 @@ using CheckItAndroidApp.Core.Business.Adapters;
 using System.Collections.Generic;
 using CheckItAndroidApp.Core.Business.Dtos;
 using Android.Content;
-using Android.Support.Design.Widget;
 using Android.Runtime;
+using System.Linq;
+using Android.Support.Design.Widget;
+using CheckItAndroidApp.Core.Data.Utils;
+using CheckItAndroidApp.Core.Client.Dialogs;
+using CheckItAndroidApp.Core.Client.Callbacks;
+using System;
 
 namespace CheckItAndroidApp.Client.Views
 {
@@ -19,7 +24,7 @@ namespace CheckItAndroidApp.Client.Views
     {
         private PreferenceHelper prefHelper;
         private DataManger dataManager;
-        private List<ChallangeDto> challenges;
+        private List<ChallengeDto> challenges;
         private ChallengeAdapter adapter;
 
         protected override void OnCreate(Bundle bundle)
@@ -33,6 +38,7 @@ namespace CheckItAndroidApp.Client.Views
 
             var recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
             var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
+            var addItemButton = FindViewById<com.refractored.fab.FloatingActionButton>(Resource.Id.addItemButton);
 
             SetActionBar(toolbar);
             ActionBar.Title = "Check It";
@@ -45,18 +51,29 @@ namespace CheckItAndroidApp.Client.Views
             //Get challenges from database
             challenges = dataManager.ChallangeData.GetChallanges();
 
-            adapter = new ChallengeAdapter(challenges);
+            adapter = new ChallengeAdapter(this, challenges.Where(w => !w.IsCompleted).ToList());
 
             recyclerView.SetAdapter(adapter);
 
-            adapter.ItemClick += MoviesAdapter_ItemClick;
-
-            // pref.Insert(PreferenceKeys.UserName, "Nejc Lubej");
-
-            //  var userName = pref.GetString(PreferenceKeys.UserName);
+            adapter.ItemClick += Challenge_ItemClick;
+            addItemButton.Click += AddItemButton_Click;
         }
 
-        private void MoviesAdapter_ItemClick(object sender, int i)
+        private void AddItemButton_Click(object sender, System.EventArgs e)
+        {
+
+            var transaction = FragmentManager.BeginTransaction();
+            var dialogFragment = new AddChallengeDialog();
+            dialogFragment.ChallangeAdded += OnChallengeAdded;
+            dialogFragment.ChallengeUpdated += OnChallengeUpdated;
+            dialogFragment.Show(transaction, "dialog_fragment");
+
+
+            //AddChallengeDialog dialog = AddChallengeDialog.NewInstance();
+           // dialog.Show(FragmentManager, "AddChallengeDialog");
+        }
+
+        private void Challenge_ItemClick(object sender, int i)
         {
             Intent intent = new Intent(this, typeof(ChallengeView));
             intent.PutExtra("NAME", challenges[i].Name);
@@ -64,9 +81,13 @@ namespace CheckItAndroidApp.Client.Views
             Bundle bundle = new Bundle();
             bundle.PutInt("CHALLENGE_ID", challenges[i].Id);
             bundle.PutString("NAME", challenges[i].Name);
+            bundle.PutInt("DURATION", challenges[i].Duration);
+            bundle.PutInt("ENTRIES_COMPLETED", challenges[i].EntriesCompleted);
+            bundle.PutString("LAST_ENTRY_DATE", challenges[i].LastEntryDate.HasValue ? challenges[i].LastEntryDate.Value.ToString(Utils.DateFormat) : null);
+            bundle.PutInt("POSITION", i);
 
             intent.PutExtras(bundle);
-            StartActivityForResult(intent,0);
+            StartActivityForResult(intent, 0);
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
@@ -74,8 +95,11 @@ namespace CheckItAndroidApp.Client.Views
             base.OnActivityResult(requestCode, resultCode, data);
             if (resultCode == Result.Ok)
             {
-                adapter.SubtractEntryCount(data.GetIntExtra("CHALLENGE_ID", -1));
-                adapter.NotifyDataSetChanged();
+                var challengeId = data.GetIntExtra("CHALLENGE_ID", -1);
+                var entryDate = Utils.ToDateTime(data.GetStringExtra("ENTRY_DATE"));
+                var position = data.GetIntExtra("POSITION", -1);
+
+                adapter.AddEntryCount(position, entryDate);
             }
         }
 
@@ -93,8 +117,6 @@ namespace CheckItAndroidApp.Client.Views
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-
-            Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
             switch (item.ItemId)
             {
                 case Resource.Id.menuSettings:
@@ -113,8 +135,20 @@ namespace CheckItAndroidApp.Client.Views
 
             return base.OnOptionsItemSelected(item);
         }
+
+        private void OnChallengeAdded(object sender, ChallengeDto challenge)
+        {
+            adapter.AddNewChallenge(challenge);
+        }
+
+        private void OnChallengeUpdated(object sender, ChallengeDto challenge)
+        {
+            adapter.UpdateChallenge(challenge);
+        }
     }
 }
+
+//MATIC TODO
 
 //TODO bližnca za creat method stub
 //TODO ctrl + click shortcut for go to implementation
@@ -122,3 +156,8 @@ namespace CheckItAndroidApp.Client.Views
 //TODO navigate to shorcut
 //TODO get mad cash
 //todo duplicate extension https://visualstudiogallery.msdn.microsoft.com/830a6482-3b8f-41a8-97b5-b9c581e5ad8b
+
+
+
+// IDEAS TODO
+//setting -> Return after button is pressed ?

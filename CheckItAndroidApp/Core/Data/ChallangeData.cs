@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using CheckItAndroidApp.Core.Business.Dtos;
 using Android.Content;
 using System;
+using static CheckItAndroidApp.Core.Data.Utils.Enums;
 
 namespace CheckItAndroidApp.Core.Data
 {
@@ -15,22 +16,27 @@ namespace CheckItAndroidApp.Core.Data
             db = new DatabaseHelper(context);
         }
 
-        public List<ChallangeDto> GetChallanges()
+        public List<ChallengeDto> GetChallanges()
         {
-            var challangeDtos = new List<ChallangeDto>();
+            var challangeDtos = new List<ChallengeDto>();
             db.Open();
 
-            var query = @"SELECT 
+            var query = string.Format(@"SELECT 
                            c.CHALLENGE_ID, 
                            c.NAME, 
                            c.DURATION,
                            count(ce.CHALLENGE_ENTRY_ID) as ENTRY_COUNT, 
-                           MAX(ce.ENTRY_DATE) as MAX_DATE
+                           MAX(ce.ENTRY_DATE) as MAX_DATE,
+                           f.FREQUENCY_ID,
+                           f.VALUE,
+                           ft.FREQUENCY_TYPE_ID
                         FROM
 	                        CHALLENGE c
 	                        left JOIN CHALLENGE_ENTRY ce on c.CHALLENGE_ID = ce.CHALLENGE_ID
+                            left join FREQUENCY f on  f.FREQUENCY_ID = c.FREQUENCY_ID
+                            left join CT_FREQUENCY_TYPE ft on ft.FREQUENCY_TYPE_ID = f.FREQUENCY_TYPE_ID
                         GROUP BY 
-	                        c.CHALLENGE_ID";
+	                        c.CHALLENGE_ID", Utils.Utils.DateFormat);
 
             var cursor = db.ExecuteQuery(query);
 
@@ -39,14 +45,22 @@ namespace CheckItAndroidApp.Core.Data
 
             while (cursor.MoveToNext())
             {
-                challangeDtos.Add(new ChallangeDto
+                var challenge = new ChallengeDto
                 {
                     Id = cursor.GetInt(0),
                     Name = cursor.GetString(1),
                     Duration = cursor.GetInt(2),
                     EntriesCompleted = cursor.GetInt(3),
-                    LastEntryDate = ToDateTimeNull(cursor.GetString(4)),
-                });
+                    LastEntryDate = Utils.Utils.ToDateTimeNull(cursor.GetString(4)),
+                    Frequency = new Frequency
+                    {
+                        Id = cursor.GetInt(5),
+                        Value = cursor.GetInt(6),
+                        Type = Utils.Utils.ToFrequencyType(cursor.GetInt(7)),
+                    }
+                };
+
+                challangeDtos.Add(challenge);
             }
 
             cursor.Dispose();
@@ -55,20 +69,40 @@ namespace CheckItAndroidApp.Core.Data
             return challangeDtos;
         }
 
-        private DateTime? ToDateTimeNull(string dateString)
+        public List<Frequency> GetPredefinedFrequencies()
         {
-            DateTime date;
-            if (DateTime.TryParse(dateString, out date))
+            var frequencyList = new List<Frequency>();
+            db.Open();
+
+            var fetchColumns = new string[] { "FREQUENCY_ID", "VALUE", "FREQUENCY_TYPE_ID" };
+            var whereClause = string.Format("FREQUENCY_TYPE_ID = {0}", (int) FrequencyType.Predefined);
+
+            var cursor = db.GetFromTable("FREQUENCY", fetchColumns, whereClause);
+
+            if (cursor.Count == 0)
+                return null;
+
+            while (cursor.MoveToNext())
             {
-                return date;
+                var frequency = new Frequency
+                {
+                    Id = cursor.GetInt(0),
+                    Value = cursor.GetInt(1),
+                    Type = Utils.Utils.ToFrequencyType(cursor.GetInt(3)),
+                };
+
+                frequencyList.Add(frequency);
             }
 
-            return null;
+            cursor.Dispose();
+            db.Close();
+
+            return frequencyList;
         }
 
-        public ChallangeDto GetChallange(int challengeId)
+        public ChallengeDto GetChallange(int challengeId)
         {
-            var challangeDto = new ChallangeDto();
+            var challangeDto = new ChallengeDto();
             db.Open();
 
             var fetchColumns = new string[] { "CHALLENGE_ID", "NAME", "DURATION" };
@@ -81,7 +115,7 @@ namespace CheckItAndroidApp.Core.Data
 
             cursor.MoveToFirst();
 
-            return new ChallangeDto
+            return new ChallengeDto
             {
                 Id = cursor.GetInt(0),
                 Name = cursor.GetString(1),
@@ -89,12 +123,13 @@ namespace CheckItAndroidApp.Core.Data
             };
         }
 
-        public bool InsertChallengeEntry(int challengeId)
+        public bool InsertChallengeEntry(int challengeId, DateTime entryDate)
         {
             db.Open();
 
             ContentValues values = new ContentValues();
             values.Put("CHALLENGE_ID", challengeId);
+            values.Put("ENTRY_DATE", entryDate.ToString(Utils.Utils.DateFormat));
 
             var ret = db.Insert("CHALLENGE_ENTRY", values) > 0;
 

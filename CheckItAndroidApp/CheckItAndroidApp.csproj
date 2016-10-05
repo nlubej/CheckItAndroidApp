@@ -13,7 +13,10 @@
     <AssemblyName>CheckItAndroidApp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <RootNamespace>CheckItAndroidApp</RootNamespace>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
@@ -43,8 +46,16 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSpinner, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSpinner-Xamarin.1.1.1\lib\MonoAndroid\MaterialSpinner.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="NineOldAndroids, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.NineOldAndroids.0.0.1\lib\MonoAndroid\NineOldAndroids.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Refractored.FloatingActionButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Refractored.FloatingActionButton.1.3.0\lib\MonoAndroid10\Refractored.FloatingActionButton.dll</HintPath>
       <Private>True</Private>
@@ -96,15 +107,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Business\Adapters\ChallengeAdapter.cs" />
+    <Compile Include="Core\Business\Adapters\EntryAdapter.cs" />
+    <Compile Include="Core\Business\BiggerFloatingActionButton.cs" />
+    <Compile Include="Core\Business\DatePicker.cs" />
     <Compile Include="Core\Business\Dtos\ChallangeDto.cs" />
-    <Compile Include="Core\Business\Dtos\ChallengeEntrieDto.cs" />
+    <Compile Include="Core\Business\Dtos\ChallengeEntryDto.cs" />
+    <Compile Include="Core\Business\Dtos\Frequency.cs" />
+    <Compile Include="Core\Client\Callbacks\DialogResult.cs" />
+    <Compile Include="Core\Client\Dialogs\AddChallengeDialog.cs" />
     <Compile Include="Core\Client\Views\ChallangeView.cs" />
     <Compile Include="Core\Data\ChallangeData.cs" />
     <Compile Include="Core\Data\DatabaseHelper.cs" />
     <Compile Include="Core\Data\DataManger.cs" />
     <Compile Include="Core\Data\PreferenceHelper.cs" />
     <Compile Include="Core\Client\Views\ChallengeListView.cs" />
+    <Compile Include="Core\Data\Utils\Consts.cs" />
+    <Compile Include="Core\Data\Utils\Enums.cs" />
     <Compile Include="Core\Data\Utils\PreferenceUtils.cs" />
+    <Compile Include="Core\Data\Utils\Utils.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,6 +139,18 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ViewChallenge.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DialogAddNewChallenge.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RowEntry.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OkCancelButton.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ButtonBackground.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -141,10 +173,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Business\Interfaces\" />
-    <Folder Include="Core\Client\Dialogs\" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\values-v21\styles.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -158,11 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CircleEmpty.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\test.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CircleBig.xml" />
@@ -189,7 +212,24 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values-v21\colors.xml" />
+    <AndroidResource Include="Resources\values-v21\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\MyButton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

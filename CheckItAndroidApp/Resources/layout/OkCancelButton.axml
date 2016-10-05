@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_yes_no"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_alignParentBottom="true">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="100"
+        android:id="@+id/view1"
+        android:clickable="false"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="0.0dp" />
+    <Button
+        android:id="@+id/noBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_weight="20"
+        android:text="Cancel"
+        android:paddingRight="5dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/dark" />
+    <Button
+        android:id="@+id/yesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:layout_gravity="end"
+        android:layout_weight="20"
+        android:textStyle="bold"
+        android:text="Save"
+        android:textColor="@color/dark"
+        android:gravity="center_horizontal|center_vertical" />
+</LinearLayout>

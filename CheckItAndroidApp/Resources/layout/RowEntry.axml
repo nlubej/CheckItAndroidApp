@@ -4,36 +4,38 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="15dp"
-    android:paddingRight="25dp"
+    android:paddingRight="15dp"
     android:paddingTop="10dp">
-    <ImageView
-        android:src="@drawable/CircleEmpty"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/circleImg" />
+        android:layout_height="fill_parent"
+        android:text="1"
+        android:gravity="center_vertical"
+        android:textColor="#2c2d30"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/entrySequence" />
     <LinearLayout
         android:id="@+id/layout"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_toLeftOf="@+id/circleImg">
+        android:layout_marginLeft="20dp">
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Go to bed early"
-            android:id="@+id/challengeName"
+            android:text="15. October 2015"
+            android:id="@+id/entryDate"
             android:gravity="center_vertical"
             android:textColor="#2c2d30" />
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="40 Days"
+            android:text="11:10 AM"
             android:layout_marginLeft="15dp"
-            android:layout_below="@+id/challengeName"
+            android:layout_below="@+id/entryTime"
             android:layout_alignLeft="@+id/challengeName"
-            android:id="@+id/textView1" />
+            android:id="@+id/challengeDuration" />
     </LinearLayout>
 </LinearLayout>

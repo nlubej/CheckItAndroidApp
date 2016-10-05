@@ -4,12 +4,14 @@ using Android.OS;
 using CheckItAndroidApp.Core.Data;
 using Android.Support.V7.App;
 using Android.Views;
-using Android.Support.V7.Widget;
-using CheckItAndroidApp.Core.Business.Adapters;
-using System.Collections.Generic;
 using CheckItAndroidApp.Core.Business.Dtos;
 using Android.Content;
 using Android.Graphics;
+using Android.Graphics.Drawables;
+using CheckItAndroidApp.Core.Business;
+using Android.Content.Res;
+using System;
+using CheckItAndroidApp.Core.Data.Utils;
 
 namespace CheckItAndroidApp.Client.Views
 {
@@ -18,9 +20,9 @@ namespace CheckItAndroidApp.Client.Views
     {
         private PreferenceHelper prefHelper;
         private DataManger dataManager;
-        private ImageView checkButton;
-        private int challengeId;
-        private string challengeName;
+        private BiggerFloatingActionButton checkButton;
+        private ChallengeDto challange;
+        private int position;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,40 +34,67 @@ namespace CheckItAndroidApp.Client.Views
             prefHelper = new PreferenceHelper(this);
             dataManager = new DataManger(this);
      
-            var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
-            checkButton = FindViewById<ImageView>(Resource.Id.checkButton);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            checkButton = FindViewById<BiggerFloatingActionButton>(Resource.Id.checkButton);
+            var challengeName = FindViewById<TextView>(Resource.Id.challengeName);
 
-            challengeName = bundle.GetString("NAME");
-            challengeId = bundle.GetInt("CHALLENGE_ID");
+            challange = new ChallengeDto
+            {
+                Id = bundle.GetInt("CHALLENGE_ID"),
+                Name = bundle.GetString("NAME"),
+                Duration = bundle.GetInt("DURATION"),
+                EntriesCompleted = bundle.GetInt("ENTRIES_COMPLETED"),
+                LastEntryDate = Utils.ToDateTimeNull(bundle.GetString("LAST_ENTRY_DATE"))
+            };
+
+            position = bundle.GetInt("POSITION");
+
+            if (challange.CanCheck)
+            {
+                checkButton.BackgroundTintList = ColorStateList.ValueOf(Resources.GetColor(Resource.Color.colorPrimary));
+                checkButton.Clickable = true;
+                checkButton.Click += CheckButton_Click;
+            }
+            else
+            {
+                checkButton.BackgroundTintList = ColorStateList.ValueOf(Resources.GetColor(Resource.Color.lightGray));
+                checkButton.Clickable = false;
+            }
+
+            challengeName.Text = challange.Name;
 
             SetActionBar(toolbar);
 
             ActionBar.Title = "Check It";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
-        
-            checkButton.Click += CheckButton_Click;
         }
 
-        private void CheckButton_Click(object sender, System.EventArgs e)
+        private void CheckButton_Click(object sender, EventArgs e)
         {
-            checkButton.SetColorFilter(Color.LightBlue);
-
-            //TODO preverit je potrebno, da se ta ekran ni odprt recimo 23:59:59 ker potem, bo po insertu namesto današnjega datuma, dalo jutrišnji datum.
-            var isInserted = dataManager.ChallangeData.InsertChallengeEntry(challengeId);
+            var entryDate = DateTime.Now;
+            ////TODO preverit je potrebno, da se ta ekran ni odprt recimo 23:59:59 ker potem, bo po insertu namesto današnjega datuma, dalo jutrišnji datum.
+            var isInserted = dataManager.ChallangeData.InsertChallengeEntry(challange.Id, entryDate);
 
             if (isInserted)
             {
+                checkButton.BackgroundTintList = ColorStateList.ValueOf(Resources.GetColor(Resource.Color.lightGray));
+                checkButton.Clickable = false;
+
+                challange.EntriesCompleted++;
+
                 Intent myIntent = new Intent(this, typeof(ChallengeListView));
-                myIntent.PutExtra("CHALLENGE_ID", challengeId);
+                myIntent.PutExtra("CHALLENGE_ID", challange.Id);
+                myIntent.PutExtra("ENTRY_DATE", entryDate.ToString(Utils.DateFormat));
+                myIntent.PutExtra("POSITION", position);
                 SetResult(Result.Ok, myIntent);
             }
         }
 
-		/// <summary>
-		/// This is the menu for the Toolbar/Action Bar to use
-		/// </summary>
-		public override bool OnCreateOptionsMenu(IMenu menu)
+        /// <summary>
+        /// This is the menu for the Toolbar/Action Bar to use
+        /// </summary>
+        public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.ChallengeMenu, menu);
             return base.OnCreateOptionsMenu(menu);
@@ -73,7 +102,6 @@ namespace CheckItAndroidApp.Client.Views
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
             switch (item.ItemId)
             {
                 case Resource.Id.menuSettings:
